@@ -350,15 +350,68 @@ print(numbersList)
 print(numbersList2)
 print(numbersList3)  # Also changes
 
-numbersList = [5, 3, 6, 8, 2, 1, 8, 3]
+numbersList = [5, 3, 6, 8, 5, 2, 1, 8, 3]
 # for x in numbersList:
 #     if numbersList.count(x) < 2:
 #         print(x)
 #     if numbersList.count(x) > 1:
-#         print('Duplicate',x)    
+#         print('Duplicate',x)
+
+# print( 3 in numbersList)
 
 y = []
 for x in numbersList:
-    y.append(x)
-    if x in y:      
-        print(x)  
+    if x not in y:
+        y.append(x)
+
+    # if x in y:
+    #     print(x)
+print("Removing duplicates:", y)
+
+# tuples
+# they cannot be changed!
+# we use parenthesis to denote tuples
+
+numbersTup = (3, 6, 9, 12)
+
+print(numbersTup.count(3))
+print(numbersTup[0])
+print(numbersTup.index(9))  # gives the index of a number
+
+# numbersTup[0] = 1 #Gives error
+
+# unpacking
+cord1 = (1, 2, 3)
+
+x, y, z = cord1  # like destructuring in js
+print(x, y, z)
+
+# dictionary - key, value pairs
+
+customer1 = {
+    "name": "Mike",
+    "age": 15,
+    "isVerified": True
+}
+
+print(customer1)
+print(customer1['name'])
+print(customer1.get('NAME'))  # does not throw an error
+print(customer1.get('bd', '12 Dec 2001'))  # default values
+
+customer1['name'] = "Floyd"
+print(customer1['name'])
+
+phoneNo = {
+    1: 'One',
+    2: 'Two',
+    3: 'Three',
+    4: 'Four'
+}
+
+# phone = int(input('Phone: '))
+# print(phone)
+# a,b,c,d = phone
+# print(a,b,c,d)
+print(phoneNo[1],phoneNo[2],phoneNo[3],phoneNo[4])
+
