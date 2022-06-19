@@ -1,5 +1,8 @@
 import math
 from tkinter.tix import Tree
+from matplotlib.pyplot import pink
+
+from numpy import matrix, number
 
 print('Hello World!')
 
@@ -233,22 +236,129 @@ count = 0
 #     else:
 #         print("I don't understand that..")
 
-#for loop
+# for loop
 
 # for x in 'python':
 #     print(x)
 
-# arr = ['Kris','John','Mike','James']    
+# arr = ['Kris','John','Mike','James']
 # for names in arr:
 #     print(names)
 
 # #range
 # for items in range(10):
-#     print(items)    
+#     print(items)
 
 # for items in range(2,11):
-#     print(items)    
+#     print(items)
 
-#steps
-for items in range(0,10,2):
-    print(items) 
+# steps
+# for items in range(0,10,2):
+#     print(items)
+
+# nested loop
+# print('Nested loops')
+# for x in range(1,6):
+#     for y in range(1,6):
+#         print(f'({x},{y})')
+
+# challenge
+numbers = [5, 2, 5, 2, 2]
+# for x in numbers:
+#     print('x'*x)
+
+# for y in numbers:
+#     print('x',y)
+
+# names = ['john', 'Bane', 'judy', 'Kimmy']
+# print(names[0])
+# print(names[-1])
+# print(names[:3])
+# print(names[2:])
+
+# #find largest num
+# num1 = [-9, 5, -8, 3, 7, 2]
+
+# samp = num1[0]
+# for x in num1:
+#     if x < samp:
+#         samp = x
+# print('Smallest',samp)
+
+# for x in num1:
+#     if x > samp:
+#         samp = x
+# print('Largest',samp)
+
+
+# 2d list
+print('matrix')
+matrix1 = [
+    [1, 2, 3],
+    [4, 5, 6],
+    [7, 8, 9]
+]
+
+# print(matrix1[0][0])
+
+# for x in matrix1:
+#         print(x)
+
+for x in matrix1:
+    for y in x:
+        print(y)
+
+
+# list methods
+
+numbersList = [5, 3, 6, 8, 2, 1, 8]
+
+numbersList.append(12)
+print(numbersList)
+
+# adding number in the middle of a list
+numbersList.insert(3, 7)
+numbersList.insert(2, 9)
+print(numbersList)
+
+numbersList.pop()
+print(numbersList)
+
+print(numbersList.index(5))
+# print(numbersList[0])
+
+# count
+print(numbersList.count(8))
+
+# sort
+numbersList.sort()
+print(numbersList)
+
+# reverse sort list
+numbersList.sort()
+numbersList.reverse()
+print(numbersList)
+
+# copy
+numbersList2 = numbersList.copy()
+numbersList3 = numbersList
+
+print(numbersList2)
+numbersList.pop()
+numbersList.pop()
+print(numbersList)
+print(numbersList2)
+print(numbersList3)  # Also changes
+
+numbersList = [5, 3, 6, 8, 2, 1, 8, 3]
+# for x in numbersList:
+#     if numbersList.count(x) < 2:
+#         print(x)
+#     if numbersList.count(x) > 1:
+#         print('Duplicate',x)    
+
+y = []
+for x in numbersList:
+    y.append(x)
+    if x in y:      
+        print(x)  
