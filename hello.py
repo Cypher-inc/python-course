@@ -409,9 +409,101 @@ phoneNo = {
     4: 'Four'
 }
 
-# phone = int(input('Phone: '))
+# phone = input('Phone: ')
+# # phoneList1 = phone.split()
+# # print(phoneList1)
 # print(phone)
+
 # a,b,c,d = phone
 # print(a,b,c,d)
-print(phoneNo[1],phoneNo[2],phoneNo[3],phoneNo[4])
+# print(phoneNo[1],phoneNo[2],phoneNo[3],phoneNo[4])
 
+# phoneList = [1,2,3,4]
+
+# phoneWordList = []
+# for x in phone:
+#     # print(x)
+#     phoneWordList.append(phoneNo[int(x)])
+#     # print(phoneNo[int(x)])
+
+# a,b,c,d = phoneWordList
+# print(a,b,c,d)
+# print(phoneWordList)
+
+# msg = input(">")
+# words = msg.split(" ")
+# emojis = {
+#     ":)": "😀",
+#     ":(": "😔",
+#     ":/": "😕"
+# }
+
+# # print(msg[-2:])
+# # print(msg[:-2])
+# print(msg[:-2] + emojis[words[-1]])
+
+# for x in words:
+# print(x[-2:])
+
+# mystr = "my name jeff :)"
+# print(mystr[-2:])
+
+# functions
+
+print('Functions:')
+
+
+def helloWorld():
+    print('Hi there')
+    print("Welcome aboard!")
+
+
+helloWorld()
+
+# passing values
+
+
+def helloWorld(firstname, lastname):
+    print('Hi there,', firstname, lastname)
+    print("Welcome aboard!")
+
+
+helloWorld('Kris', 'D')
+
+# default values
+
+
+def helloWorld(name='NoName'):
+    print('Hi there,', name)
+    print("Welcome aboard!")
+
+
+helloWorld()
+
+# keyword argument
+
+
+def helloWorld(firstname, lastname):
+    print('Hi there,', firstname, lastname)
+    print("Welcome aboard!")
+
+
+helloWorld(lastname='Smith', firstname="Mike")
+
+# return
+
+
+def helloWorld():
+    return "Hello World!"
+
+
+print(helloWorld())
+
+
+def squareFunc(num):
+    print(num**2)
+
+
+# by refault all functions retruns none so print(squareFunc(9)) while alredy
+# has a print will return none
+print(squareFunc(9))
