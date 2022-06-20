@@ -507,3 +507,78 @@ def squareFunc(num):
 # by refault all functions retruns none so print(squareFunc(9)) while alredy
 # has a print will return none
 print(squareFunc(9))
+
+
+def emojiConverter(msg):
+    words = msg.split(" ")
+    emojis = {
+        ":)": "😀",
+        ":(": "😔",
+        ":/": "😕"
+    }
+    print(msg[:-2] + emojis[words[-1]])
+
+# textInput = input('> ')
+# emojiConverter(textInput)
+
+
+# exception
+# try:
+#     age = int(input("Age: "))
+#     income = 20000
+#     risk = income/age
+#     print("age:",age, "income:",risk)
+# except ZeroDivisionError:
+#     print('Age cannot be zero!')
+# except ValueError:
+#     print('Invalid Value')
+
+# classes
+# complex types: List, Dictonary, classes
+
+class Point:  # capitalise Name
+    def move(self):
+        print('move')
+
+    def draw(self):
+        print('draw')
+
+
+point1 = Point() #declaring the obj for the class
+point1.draw()
+point1.move()
+point1.x = 10
+point1.y = 20
+print(point1.x, point1.y)
+
+point2 = Point()
+point2.x = 30
+print(point2.x)
+
+#constructors
+class Point:  # capitalise Name
+    def __init__(self, x, y): #constuctor
+        self.x = x
+        self.y = y
+    def move(self):
+        print('move')
+
+    def draw(self):
+        print('draw')
+
+
+point1 = Point(10,20)
+print(point1.x)
+
+class Person : 
+    def __init__(self, name): #name argument
+        self.name = name
+    def talk(self):
+        print(self.name,'can speak')
+
+mike = Person('Mike Scott')
+print(mike.name)
+mike.talk()
+
+alex = Person('Alex Sparrow')
+alex.talk()
