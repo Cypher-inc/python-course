@@ -582,3 +582,23 @@ mike.talk()
 
 alex = Person('Alex Sparrow')
 alex.talk()
+
+# n = int(input())
+
+
+#hackerrank
+# test = ''
+# for x in range(1,n):
+#     test += str(x)
+# print(test)
+
+def swap_case(s):
+    for x in s:
+        if x in x.upper():
+            print(x.lower())
+        else:
+            print(x.upper())    
+
+if __name__ == '__main__':
+    s = input()
+    swap_case(s)
