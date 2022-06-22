@@ -651,7 +651,7 @@ alex.talk()
 # print(str1)
 
 
-s = input()
+# s = input()
 
 
 # for x in s:
@@ -679,51 +679,117 @@ s = input()
 #     if x.isalpha() or x.isdigit() or x.isupper() or x.islower():
 #         print('TRUE')
 
-checkLower = False
-checkUpper = False
-checkDigit = False
-checkAlpha = False
-checkAlphaNum = False
+# checkLower = False
+# checkUpper = False
+# checkDigit = False
+# checkAlpha = False
+# checkAlphaNum = False
 
-for x in s:
-    if x.isalnum():
-        print(True)
-        checkAlphaNum = True
-        break
-if not checkAlphaNum:
-    print(False)
+# for x in s:
+#     if x.isalnum():
+#         print(True)
+#         checkAlphaNum = True
+#         break
+# if not checkAlphaNum:
+#     print(False)
 
-for x in s:
-    if x.isalpha():
-        print(True)
-        checkAlpha = True
-        break
-if not checkAlpha:
-    print(False)
+# for x in s:
+#     if x.isalpha():
+#         print(True)
+#         checkAlpha = True
+#         break
+# if not checkAlpha:
+#     print(False)
 
-for x in s:
-    if x.isdigit():
-        print(True)
-        checkDigit = True
-        break
-if not checkDigit:
-    print(False)
+# for x in s:
+#     if x.isdigit():
+#         print(True)
+#         checkDigit = True
+#         break
+# if not checkDigit:
+#     print(False)
 
 
-for x in s:
-    if x.islower():
-        print(True)
-        checkLower = True
-        break
-if not checkLower:
-    print(False)
+# for x in s:
+#     if x.islower():
+#         print(True)
+#         checkLower = True
+#         break
+# if not checkLower:
+#     print(False)
 
-for x in s:
-    if x.isupper():
-        print(True)
-        checkUpper = True
-        break
-if not checkUpper:
-    print(False)
+# for x in s:
+#     if x.isupper():
+#         print(True)
+#         checkUpper = True
+#         break
+# if not checkUpper:
+#     print(False)
 
 # print('''#$%@^&*kjnk svskjnbui h 4oi3hheuh /dfh uidshvhdsuihv suihc 0hrem89m4c02mw4xo;,wh fwhncoishmxlxfkjsahnxu83v 08 n8OHOIHIOMOICWHOFCMHEOFMCOEJMC0J09C 03J J3L;JMFC3JM3JC3'JIOO9MMJ099U N090N9 OOHOLNHNLLKNLKNKNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333000000000000000000000000000000000000000000000000000000000000000000000000000'''.isalpha())
+
+
+# list comprehension
+# for i in range(1, 11):
+#     print(i**2)
+
+# square1 = [i**2 for i in range(1, 11)]
+# print(square1)
+
+# if __name__ == '__main__':
+#     x = int(input())
+#     y = int(input())
+#     z = int(input())
+#     n = int(input())
+
+# l1 = []    
+# for a in range(x+1):
+#     for b in range(y+1):
+#         for c in range(z+1):
+#             # print(a,b,c)
+#             if(a+b+c != n):
+#                 l1.append([a,b,c])
+# print(l1)
+
+
+#text wrap
+# import textwrap
+
+# def wrap(string, max_width):
+#     test = ''
+#     test1 = ''
+#     for x in string:
+#         test1 +=x
+#         if len(test1) == max_width:
+#             test += test1+'\n'
+#             test1 = ''
+#     return test + test1       
+
+# if __name__ == '__main__':
+#     string, max_width = input(), int(input())
+#     result = wrap(string, max_width)
+#     print(result)
+
+#find a string
+def count_substring(string, sub_string):
+    string = string.replace(" ", "")
+    test = ''
+    count = 0
+    for x in string:
+        if x in sub_string:
+            test += x
+    for y in range(0,len(test)):
+        # print(test[y:y+len(sub_string)])
+        if test[y:y+len(sub_string)] == sub_string:
+            print(test)
+            count += 1
+    return count
+
+if __name__ == '__main__':
+    string = input().strip()
+    sub_string = input().strip()
+    
+    count = count_substring(string, sub_string)
+    print(count)
+
+# print('WoW!ItSCoOWoWW'.count('oW'))
