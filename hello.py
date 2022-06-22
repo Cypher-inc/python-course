@@ -1,5 +1,5 @@
 import math
-from tkinter.tix import Tree
+from tabnanny import check
 from matplotlib.pyplot import pink
 
 from numpy import matrix, number
@@ -544,7 +544,7 @@ class Point:  # capitalise Name
         print('draw')
 
 
-point1 = Point() #declaring the obj for the class
+point1 = Point()  # declaring the obj for the class
 point1.draw()
 point1.move()
 point1.x = 10
@@ -555,11 +555,14 @@ point2 = Point()
 point2.x = 30
 print(point2.x)
 
-#constructors
+# constructors
+
+
 class Point:  # capitalise Name
-    def __init__(self, x, y): #constuctor
+    def __init__(self, x, y):  # constuctor
         self.x = x
         self.y = y
+
     def move(self):
         print('move')
 
@@ -567,14 +570,17 @@ class Point:  # capitalise Name
         print('draw')
 
 
-point1 = Point(10,20)
+point1 = Point(10, 20)
 print(point1.x)
 
-class Person : 
-    def __init__(self, name): #name argument
+
+class Person:
+    def __init__(self, name):  # name argument
         self.name = name
+
     def talk(self):
-        print(self.name,'can speak')
+        print(self.name, 'can speak')
+
 
 mike = Person('Mike Scott')
 print(mike.name)
@@ -586,19 +592,138 @@ alex.talk()
 # n = int(input())
 
 
-#hackerrank
+# hackerrank
 # test = ''
 # for x in range(1,n):
 #     test += str(x)
 # print(test)
 
-def swap_case(s):
-    for x in s:
-        if x in x.upper():
-            print(x.lower())
-        else:
-            print(x.upper())    
+# def swap_case(s):
+#     for x in s:
+#         if x in x.upper():
+#             print(x.lower())
+#         else:
+#             print(x.upper())
 
-if __name__ == '__main__':
-    s = input()
-    swap_case(s)
+# if __name__ == '__main__':
+#     s = input()
+#     swap_case(s)
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+
+# # print(n)
+# # print(arr)
+
+# max1 = max(arr)
+# arr.remove(max1)
+# print(arr)
+# max2 = max(arr)
+# print(max2)
+# # for x in arr:
+# #     print(x)
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     integer_list = (map(int,input().split()))
+# print(hash(integer_list))
+
+# s = 'chris al'
+# l1 = s.split(' ')
+# # print(l1)
+# l2 = []
+# for x in l1:
+#     l2.append(x.capitalize())
+#     print(x.capitalize())
+#     # l2 += x.capitalize()
+# print(l2)
+# str1 = ' '.join(map(str, l2))
+# str1.join(l2)
+# print(str1)
+# print(s.capitalize())
+
+# discussion
+# for x in s[:].split():
+#         str1 = s.replace(x, x.capitalize())
+# print(str1)
+
+
+s = input()
+
+
+# for x in s:
+#     print(x)
+
+
+#     if checkAlpha:
+#         continue
+#     else:
+#         if x.isalpha():
+#             print('Alpha : TRUE')
+#             checkAplha = True
+#         if x.isdigit():
+#             print("Digit: TRUE")
+#             checkDigit = True
+#         if x.isupper():
+#             print('Upper: TRue')
+#             checkUpper = True
+#         if  x.islower():
+#             print('Lower: TRue')
+#             checkLower = True
+
+# for x in s:
+#     print(x)
+#     if x.isalpha() or x.isdigit() or x.isupper() or x.islower():
+#         print('TRUE')
+
+checkLower = False
+checkUpper = False
+checkDigit = False
+checkAlpha = False
+checkAlphaNum = False
+
+for x in s:
+    if x.isalnum():
+        print(True)
+        checkAlphaNum = True
+        break
+if not checkAlphaNum:
+    print(False)
+
+for x in s:
+    if x.isalpha():
+        print(True)
+        checkAlpha = True
+        break
+if not checkAlpha:
+    print(False)
+
+for x in s:
+    if x.isdigit():
+        print(True)
+        checkDigit = True
+        break
+if not checkDigit:
+    print(False)
+
+
+for x in s:
+    if x.islower():
+        print(True)
+        checkLower = True
+        break
+if not checkLower:
+    print(False)
+
+for x in s:
+    if x.isupper():
+        print(True)
+        checkUpper = True
+        break
+if not checkUpper:
+    print(False)
+
+# print('''#$%@^&*kjnk svskjnbui h 4oi3hheuh /dfh uidshvhdsuihv suihc 0hrem89m4c02mw4xo;,wh fwhncoishmxlxfkjsahnxu83v 08 n8OHOIHIOMOICWHOFCMHEOFMCOEJMC0J09C 03J J3L;JMFC3JM3JC3'JIOO9MMJ099U N090N9 OOHOLNHNLLKNLKNKNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNNKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKKK3333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333333000000000000000000000000000000000000000000000000000000000000000000000000000'''.isalpha())
