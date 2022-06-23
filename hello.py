@@ -847,16 +847,35 @@ alex.talk()
 
 
 #itertools.product()
+# from itertools import product
 
-from itertools import product
+# A = list(map(int, input().split()))
+# B = list(map(int, input().split()))
 
-A = list(map(int, input().split()))
-B = list(map(int, input().split()))
+# t1 = tuple(list(product(A,B)))
 
-t1 = tuple(list(product(A,B)))
+# # print(' '.join(str(x) for x in t1))
+# s1 = ''
+# for x in t1:
+#     s1 += ''.join(str(x)) + ' '
+# print(s1)
 
-# print(' '.join(str(x) for x in t1))
-s1 = ''
-for x in t1:
-    s1 += ''.join(str(x)) + ' '
-print(s1)
+#Nested list 
+
+if __name__ == '__main__':
+    nameDic = []
+    scoreList = []
+    for _ in range(int(input())):
+        name = input()
+        score = float(input())
+        nameDic.append(name)  
+        scoreList.append(score)  
+
+    print(nameDic)    
+    print(scoreList)    
+
+    for x in nameDic:
+        print(x,y)
+
+    # for x in sco
+          
