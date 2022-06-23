@@ -877,5 +877,4 @@ if __name__ == '__main__':
     for x in nameDic:
         print(x,y)
 
-    # for x in sco
           
