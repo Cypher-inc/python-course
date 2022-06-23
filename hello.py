@@ -631,19 +631,21 @@ alex.talk()
 #     integer_list = (map(int,input().split()))
 # print(hash(integer_list))
 
+#capitalise
 # s = 'chris al'
-# l1 = s.split(' ')
-# # print(l1)
-# l2 = []
-# for x in l1:
-#     l2.append(x.capitalize())
-#     print(x.capitalize())
-#     # l2 += x.capitalize()
-# print(l2)
-# str1 = ' '.join(map(str, l2))
-# str1.join(l2)
-# print(str1)
-# print(s.capitalize())
+# def solve(s):
+#     l1 = s.split(' ')
+#     # print(l1)
+#     l2 = []
+#     for x in l1:
+#         l2.append(x.capitalize())
+#         print(x.capitalize())
+#         # l2 += x.capitalize()
+#     # print(l2)
+#     str1 = ' '.join(map(str, l2))
+#     str1.join(l2)
+#     return str1
+    # return s.capitalize()
 
 # discussion
 # for x in s[:].split():
@@ -771,25 +773,90 @@ alex.talk()
 #     print(result)
 
 #find a string
-def count_substring(string, sub_string):
-    string = string.replace(" ", "")
-    test = ''
-    count = 0
-    for x in string:
-        if x in sub_string:
-            test += x
-    for y in range(0,len(test)):
-        # print(test[y:y+len(sub_string)])
-        if test[y:y+len(sub_string)] == sub_string:
-            print(test)
-            count += 1
-    return count
+# def count_substring(string, sub_string):
+#     string = string.replace(" ", "")
+#     test = ''
+#     count = 0
+#     for x in string:
+#         if x in sub_string:
+#             test += x
+#     for y in range(0,len(test)):
+#         # print(test[y:y+len(sub_string)])
+#         if test[y:y+len(sub_string)] == sub_string:
+#             print(test)
+#             count += 1
+#     return count
 
-if __name__ == '__main__':
-    string = input().strip()
-    sub_string = input().strip()
+#hackerrank discussion soln - usestartswith()
+# def count_substring(string, sub_string):
+#     count = 0
+#     for x in range(len(string)):
+#         if string[x:].startswith(sub_string):
+#             print(string[x:])
+#             count += 1
+#     return count
+
+# if __name__ == '__main__':
+#     string = input().strip()
+#     sub_string = input().strip()
     
-    count = count_substring(string, sub_string)
-    print(count)
+#     count = count_substring(string, sub_string)
+#     print(count)
 
 # print('WoW!ItSCoOWoWW'.count('oW'))
+
+# print('ABCDCDC'.startswith('CDC'))
+
+# finds only once
+# str1 = ' wellcometopythonprogramingpython'
+# subStr = 'python'
+
+# print(str1.find(subStr))
+
+# def findString(str1, subStr):
+#     initial= str1.find(subStr)
+#     final = len(subStr)
+#     return str1[initial:initial+final]
+
+# print(findString(str1,subStr))
+
+#find the runner up
+# if __name__ == '__main__':
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     arr1 = arr[:]
+#     comp1 = arr[0]
+#     for x in arr :
+#         # print(x)
+#         if x > comp1:
+#             comp1 = x
+#     # print(comp1)        
+#     for y in arr1:
+#         # print(y)
+#         if y != comp1:
+#             continue
+#         arr.remove(comp1)
+#         # print(arr.remove(comp1))
+#     comp2 = arr[0]       
+#     for x in arr:
+#         # print(x)
+#         if x >= comp2:
+#             comp2 = x           
+#     print(comp2)        
+    # print(arr)
+
+
+#itertools.product()
+
+from itertools import product
+
+A = list(map(int, input().split()))
+B = list(map(int, input().split()))
+
+t1 = tuple(list(product(A,B)))
+
+# print(' '.join(str(x) for x in t1))
+s1 = ''
+for x in t1:
+    s1 += ''.join(str(x)) + ' '
+print(s1)
