@@ -1,4 +1,6 @@
 import math
+from re import X
+import string
 from tabnanny import check
 from matplotlib.pyplot import pink
 
@@ -631,7 +633,7 @@ alex.talk()
 #     integer_list = (map(int,input().split()))
 # print(hash(integer_list))
 
-#capitalise
+# capitalise
 # s = 'chris al'
 # def solve(s):
 #     l1 = s.split(' ')
@@ -645,7 +647,7 @@ alex.talk()
 #     str1 = ' '.join(map(str, l2))
 #     str1.join(l2)
 #     return str1
-    # return s.capitalize()
+# return s.capitalize()
 
 # discussion
 # for x in s[:].split():
@@ -744,7 +746,7 @@ alex.talk()
 #     z = int(input())
 #     n = int(input())
 
-# l1 = []    
+# l1 = []
 # for a in range(x+1):
 #     for b in range(y+1):
 #         for c in range(z+1):
@@ -754,7 +756,7 @@ alex.talk()
 # print(l1)
 
 
-#text wrap
+# text wrap
 # import textwrap
 
 # def wrap(string, max_width):
@@ -765,14 +767,14 @@ alex.talk()
 #         if len(test1) == max_width:
 #             test += test1+'\n'
 #             test1 = ''
-#     return test + test1       
+#     return test + test1
 
 # if __name__ == '__main__':
 #     string, max_width = input(), int(input())
 #     result = wrap(string, max_width)
 #     print(result)
 
-#find a string
+# find a string
 # def count_substring(string, sub_string):
 #     string = string.replace(" ", "")
 #     test = ''
@@ -787,7 +789,7 @@ alex.talk()
 #             count += 1
 #     return count
 
-#hackerrank discussion soln - usestartswith()
+# hackerrank discussion soln - usestartswith()
 # def count_substring(string, sub_string):
 #     count = 0
 #     for x in range(len(string)):
@@ -799,7 +801,7 @@ alex.talk()
 # if __name__ == '__main__':
 #     string = input().strip()
 #     sub_string = input().strip()
-    
+
 #     count = count_substring(string, sub_string)
 #     print(count)
 
@@ -820,7 +822,7 @@ alex.talk()
 
 # print(findString(str1,subStr))
 
-#find the runner up
+# find the runner up
 # if __name__ == '__main__':
 #     n = int(input())
 #     arr = list(map(int, input().split()))
@@ -830,23 +832,23 @@ alex.talk()
 #         # print(x)
 #         if x > comp1:
 #             comp1 = x
-#     # print(comp1)        
+#     # print(comp1)
 #     for y in arr1:
 #         # print(y)
 #         if y != comp1:
 #             continue
 #         arr.remove(comp1)
 #         # print(arr.remove(comp1))
-#     comp2 = arr[0]       
+#     comp2 = arr[0]
 #     for x in arr:
 #         # print(x)
 #         if x >= comp2:
-#             comp2 = x           
-#     print(comp2)        
-    # print(arr)
+#             comp2 = x
+#     print(comp2)
+# print(arr)
 
 
-#itertools.product()
+# itertools.product()
 # from itertools import product
 
 # A = list(map(int, input().split()))
@@ -860,21 +862,182 @@ alex.talk()
 #     s1 += ''.join(str(x)) + ' '
 # print(s1)
 
-#Nested list 
+# Nested list
 
-if __name__ == '__main__':
-    nameDic = []
-    scoreList = []
-    for _ in range(int(input())):
-        name = input()
-        score = float(input())
-        nameDic.append(name)  
-        scoreList.append(score)  
+# if __name__ == '__main__':
+#     nameDic = []
+#     scoreList = []
+#     for _ in range(int(input())):
+#         name = input()
+#         score = float(input())
+#         nameDic.append(name)
+#         scoreList.append(score)
 
-    print(nameDic)    
-    print(scoreList)    
+#     print(nameDic)
+#     print(scoreList)
 
-    for x in nameDic:
-        print(x,y)
+#     for x in nameDic:
+#         print(x,y)
 
-          
+
+# string formatter
+
+# def print_formatted(number):
+#     for x in range(1,number+1):
+#         print(f'{x} {oct(x)} {hex(x)} {bin(x)} ')
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     print_formatted(n)
+
+
+# Row,Col = map(int,input().split(' '))
+
+# print(Row,Col)
+# for x in range(1,Row,2):
+#     print(('.|.'*x).center(Col,'-'))
+# print(('WELCOME').center(Col,'-'))
+# for x in reversed(range(1,Row,2)):
+#     print(('.|.'*x).center(Col,'-'))
+
+
+# alphabet rangoli
+# def print_rangoli(size):
+#     for x in range(1, (size*2)-1, 2):
+#         print(('-'+'a-'*x).center((size*3), '-'))
+#     # for x in range(1, (size*2)-1, 2):
+#     #     x = ('a'+'-a'*x)
+#     # print(x)
+#     # print(('-'*x).center((size*2)+1,'a'))
+#     for x in reversed(range(1, (size*2)-1, 2)):
+#         print(('-'+'a-'*x).center((size*3), '-'))
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     print_rangoli(n)
+
+
+# import string
+# alpha = string.ascii_lowercase
+
+# n = int(input())
+# L = []
+# for i in range(n):
+#     s = "-".join(alpha[i:n])
+#     L.append((s[::-1]+s[1:]).center(4*n-3, "-"))
+# print('\n'.join(L[:0:-1]+L))
+
+
+# from itertools import permutations
+# string1,num1 = map(str,input().split(' '))
+
+# list1 = list(permutations(string1,int(num1)))
+
+# str1 = ''
+# count = 0
+# list2= []
+# for x in list1:
+#     # print(x)
+#     for y in x:
+#         str1+=y
+#         count += 1
+#         if count == int(num1):
+#             list2.append(str1)
+#             count = 0
+#             str1 = ''
+# sortedList = sorted(list2)
+# for x in  sortedList:
+#     print(x)
+
+# intro to sets
+# def average(array):
+#     set1 = set(array)
+#     # print(set(array))
+#     sum1 = sum(set1)
+#     avg = sum1 / len(set1)
+#     return '%.3f' % avg
+
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     arr = list(map(int, input().split()))
+#     result = average(arr)
+#     print(result)
+
+# take multiple inputs on seperate lines
+# n = int(input())
+# list1 = list(map(int, input().split(' ')))
+
+# print(n)
+# print(list1)
+
+# multiple inputs on the same line
+# string1,num1 = map(str,input().split(' '))
+# print(string1, int(num1))
+
+# strip
+# string = input().strip()
+# sub_string = input().strip()
+
+# print(string,sub_string)
+
+# mutation
+# def mutate_string(string, position, character):
+#     return(string[:position]+character+string[position+1:])
+
+# if __name__ == '__main__':
+#     s = input()
+#     i, c = input().split()
+#     s_new = mutate_string(s, int(i), c)
+#     print(s_new)
+
+# percentage
+# if __name__ == '__main__':
+#     n = int(input())
+#     name = []
+#     for _ in range(n):
+#         name = map(str,input().split())
+#     print(name)
+#     # set1 = set(name)
+#     # print(set1)
+#     # for x in name:
+#     #     print(x)
+
+# multi line input
+# for _ in range(n):
+#         name.append(input())
+
+# if __name__ == '__main__':
+#     n = int(input())
+#     name = []
+#     for _ in range(n):
+#         name.append(input())
+#     # print(name)
+#     print(len(set(name)))
+
+    # list1 = []
+    # for x in name:
+    #     for y in x:
+    #         print(y)
+    #         list1.append(y)
+    # print(set(list1),len(set(list1)))
+
+#set difference 
+# totalEng = int(input())
+# eng = input().split(' ')
+# totalFrench = int(input())
+# french = input().split(' ')
+# # print(totalEng, eng)
+# # print(totalFrench,french)
+# s1 = set(eng)
+# print(len(s1.difference(french)))
+
+#set union 
+# engTotal = int(input())
+# eng = input().split(' ')
+# frenchTotal = int(input())
+# french = input().split(' ')
+
+# set1 = set(eng)
+# print(len(set1.union(french)))
