@@ -528,27 +528,40 @@ print('-------Day 9-------')
 
 # print(net_price)
 
-item_name = int(input())
-net_price = ''
+# item_name = int(input())
+# net_price = ''
 
-for _ in range(item_name):
-    net_price += str((input())) + '\n'
+# for _ in range(item_name):
+#     net_price += str((input())) + '\n'
 
-print(net_price)
+# # print(net_price)
 
-test = []
+# test = []
 
-for i in net_price.strip().split("\n"):
-    split = i.rsplit(maxsplit=1)
-    split[1] = int(split[1])
-    test.append(split)
-# print(test)
+# for i in net_price.strip().split("\n"):
+#     split = i.rsplit(maxsplit=1)
+#     split[1] = int(split[1])
+#     test.append(split)
+# # print(test)
 
-list1 = []
-for x in test:
-    # print(x[0])
-    if x[0] in list1[0]:
-        continue
-    else:
-        list1.append(x)
-print(list1)
+# list1 = []
+# list2 = []
+# for x in test:
+#     # print(x[0])
+#     if x[1] in list1:
+#         # print(">",x[0])
+#         index = list1.index(x[1])
+#         list2[index][1] += x[1]
+#         # list2[x[1]][0] += x[1] 
+#         continue
+#     else:
+#         list1.append(x[1])
+#         list2.append(x)
+# # list2[0][0] += 'BANANA'        
+# # print(list2[0][1])
+# # print(list2)
+
+# for x in list2:
+#     print(x[0],x[1])
+# print(list1)
+
