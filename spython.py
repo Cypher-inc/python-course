@@ -493,26 +493,62 @@ print('-------Day 9-------')
 # for x in sorted(listName):
 #     print(x)
 
-#zip (binds two arrays) list(zip(x,y))
-#sort (sorts a list of numbers from smallest to largest) .sort()
-#sorted (alphabetically sorts items in a list) sorted(x)
+# zip (binds two arrays) list(zip(x,y))
+# sort (sorts a list of numbers from smallest to largest) .sort()
+# sorted (alphabetically sorts items in a list) sorted(x)
 
-noShoes = int(input())
-shoeSize = list(map(int,input().split(' ')))
-noCustoms = int(input())
-sp = []
-for _ in range(noCustoms):
-    vals = list(map(int,input().split(' ')))
-    sp.append(vals)
-# print(noShoes)    
-# print(shoeSize)
-# print(noCustoms)
-# print(sp)
-cost1 = 0
-for x in sp:
+
+# collection
+# noShoes = int(input())
+# shoeSize = list(map(int,input().split(' ')))
+# noCustoms = int(input())
+# sp = []
+# for _ in range(noCustoms):
+#     vals = list(map(int,input().split(' ')))
+#     sp.append(vals)
+# # print(noShoes)
+# # print(shoeSize)
+# # print(noCustoms)
+# # print(sp)
+# cost1 = 0
+# for x in sp:
+#     # print(x[0])
+#     if x[0] in shoeSize:
+#         # print(x[1])
+#         cost1 += x[1]
+#         shoeSize.remove(x[0])
+# print(cost1)
+
+# collection ordered dictionary
+# item_name = int(input())
+# net_price = []
+
+# for _ in range(item_name):
+#     net_price.append((input()))
+
+# print(net_price)
+
+item_name = int(input())
+net_price = ''
+
+for _ in range(item_name):
+    net_price += str((input())) + '\n'
+
+print(net_price)
+
+test = []
+
+for i in net_price.strip().split("\n"):
+    split = i.rsplit(maxsplit=1)
+    split[1] = int(split[1])
+    test.append(split)
+# print(test)
+
+list1 = []
+for x in test:
     # print(x[0])
-    if x[0] in shoeSize:
-        # print(x[1])
-        cost1 += x[1] 
-        shoeSize.remove(x[0])
-print(cost1)
+    if x[0] in list1[0]:
+        continue
+    else:
+        list1.append(x)
+print(list1)
