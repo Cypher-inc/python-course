@@ -421,14 +421,14 @@
 #     # print(name)
 #     print(len(set(name)))
 
-    # list1 = []
-    # for x in name:
-    #     for y in x:
-    #         print(y)
-    #         list1.append(y)
-    # print(set(list1),len(set(list1)))
+# list1 = []
+# for x in name:
+#     for y in x:
+#         print(y)
+#         list1.append(y)
+# print(set(list1),len(set(list1)))
 
-#set difference 
+# set difference
 # totalEng = int(input())
 # eng = input().split(' ')
 # totalFrench = int(input())
@@ -438,12 +438,81 @@
 # s1 = set(eng)
 # print(len(s1.difference(french)))
 
-#set union 
-engTotal = int(input())
-eng = input().split(' ')
-frenchTotal = int(input())
-french = input().split(' ')
+# set union
+# engTotal = int(input())
+# eng = input().split(' ')
+# frenchTotal = int(input())
+# french = input().split(' ')
 
-set1 = set(eng)
-print(len(set1.union(french)))
+# set1 = set(eng)
+# print(len(set1.union(french)))
 
+# string formatting
+print('-------Day 9-------')
+# def print_formatted(number):
+#     num1 = '    '
+#     for x in range(number):
+#         print(x)
+#     print(num1)
+# if __name__ == '__main__':
+#     n = int(input())
+#     print_formatted(n)
+
+# nested lists
+# if __name__ == '__main__':
+#     name = []
+#     score = []
+#     for _ in range(int(input())):
+#         name.append(input())
+#         score.append(float(input()))
+#     # print(name)
+#     # print(score)
+# res = list(zip(name, score))
+# # print(res)
+# list1 = []
+# for x in res:
+#     list1.append(list(x))
+#     # print(x[0])
+# # print(list1)
+
+# listNum = []
+# for x in list1:
+#     listNum.append(x[1])
+# # print(listNum)
+# list2 = list(set(listNum))
+# list2.sort()
+# # print(list2[1])
+
+# listName = []
+# for x in list1:
+#     # print(x[1])
+#     if list2[1] == x[1]:
+#         listName.append(x[0])
+# # print(sorted(listName))
+
+# for x in sorted(listName):
+#     print(x)
+
+#zip (binds two arrays) list(zip(x,y))
+#sort (sorts a list of numbers from smallest to largest) .sort()
+#sorted (alphabetically sorts items in a list) sorted(x)
+
+noShoes = int(input())
+shoeSize = list(map(int,input().split(' ')))
+noCustoms = int(input())
+sp = []
+for _ in range(noCustoms):
+    vals = list(map(int,input().split(' ')))
+    sp.append(vals)
+# print(noShoes)    
+# print(shoeSize)
+# print(noCustoms)
+# print(sp)
+cost1 = 0
+for x in sp:
+    # print(x[0])
+    if x[0] in shoeSize:
+        # print(x[1])
+        cost1 += x[1] 
+        shoeSize.remove(x[0])
+print(cost1)
