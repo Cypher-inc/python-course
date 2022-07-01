@@ -448,6 +448,12 @@
 # print(len(set1.union(french)))
 
 # string formatting
+from collections import namedtuple
+from pickle import TRUE
+from re import A
+
+from numpy import append
+from pyrsistent import b
 print('-------Day 9-------')
 # def print_formatted(number):
 #     num1 = '    '
@@ -552,16 +558,346 @@ print('-------Day 9-------')
 #         # print(">",x[0])
 #         index = list1.index(x[1])
 #         list2[index][1] += x[1]
-#         # list2[x[1]][0] += x[1] 
+#         # list2[x[1]][0] += x[1]
 #         continue
 #     else:
 #         list1.append(x[1])
 #         list2.append(x)
-# # list2[0][0] += 'BANANA'        
+# # list2[0][0] += 'BANANA'
 # # print(list2[0][1])
 # # print(list2)
 
 # for x in list2:
 #     print(x[0],x[1])
 # print(list1)
+# index() to get the index in a list
+
+# collection named tuple
+# nt = namedtuple('nt', 'ID MARKS CLASS NAME')
+# xyz = nt(ID=1, MARKS=97, CLASS=7, NAME='Raymond')
+# # print(xyz)
+# # print(xyz.MARKS,xyz.CLASS)
+
+# num1 = int(input())
+# for _ in num1:
+#     xyz.
+
+
+#collection deque
+# from collections import deque
+# d = deque()
+# # print(d)
+# num1 = int(input())
+# task = []
+
+# for _ in range(num1):
+#     # task += (input('>')) + '\n'
+#     task.append(input().split(' '))
+# # print(task)    
+
+# for x in task:
+#     # print(x[0])
+#     if x[0] == 'append':
+#         d.append(x[1])
+#     elif x[0] == 'appendleft':
+#         d.appendleft(x[1])    
+#     elif x[0] == 'pop':
+#         d.pop()    
+#     elif x[0] == 'popleft':
+#         d.popleft()    
+# # print(d)
+
+# str1 = ''
+# for x in d:
+#     str1 += x + ' '
+# print(str1)
+
+#set .discard() pop()
+# s = set([1])
+
+# n1 = int(input()) 
+# # nEl = []
+# nEl = list(map(int,input().split(' ')))
+# # print(nEl)
+
+# n2  = int(input())
+# nCom = []
+# for _ in range(n2):
+#     nCom.append(input().split(' '))
+# # print(nEl)
+# # print(nCom)    
+
+# s = set([])
+# for x in nEl:
+#     # print(x)
+#     s.add(x)
+# # print(s)    
+
+# for x in nCom:
+#     if x[0] == 'pop':
+#         s.pop()
+#     elif x[0] == 'discard':
+#         # print('d',x[1])
+#         s.discard(int(x[1]))
+#     elif x[0] == 'remove':
+#         try:
+#             # print('r',x[1])
+#             s.remove(int(x[1]))
+#         except KeyError:
+#             continue
+# if not s:
+#     s.add(0)
+
+# sum1 = 0    
+# for x in s:
+#     sum1 += x    
+# print(sum1)  
+
+#iterables and iterators
+# from itertools import combinations
+
+# num1 = int(input())
+# nEl = list(map(str,input().split(' ')))
+# k = int(input())
+# # print(nEl)
+# # print(k)
+
+# str1 = ''
+# for x in nEl:
+#     str1 += x
+# # print(str1)
+# per1 = list(combinations(str1, k))
+# # print(per1)
+
+# count = 0
+# for x in per1:
+#     if 'a' in x:
+#         count+=1
+#     # elif str1[1] in x:
+#     #     count+=1
+
+# print(count/len(per1))        
+
+#list
+# list1 = []
+# n = int(input())
+
+# nCom = []
+# for _ in range(n):
+#     nCom.append(input().split(' '))
+# # print(nCom)    
+
+# for x in nCom:
+#     # print(x)
+#     if x[0] == 'insert':
+#         list1.insert(int(x[1]),int(x[2]))
+#     elif x[0] == 'print':
+#         print(list1)
+#     elif x[0] == 'remove':
+#         list1.remove(int(x[1]))
+#     elif x[0] == 'append':
+#         list1.append(int(x[1]))
+#     elif x[0] == 'sort':
+#         list1.sort()
+#     elif x[0] == 'pop':
+#         list1.pop() 
+#     elif x[0] == 'reverse':
+#         list1.reverse()   
+
+#itertolls combination
+# text1 = input().split(' ')
+# # print(text1)
+# name1 = text1[0]
+# num1 = text1[1]
+
+# from itertools import combinations
+# list1 = list(combinations(name1,int(num1)))
+# list1.sort()
+# # print(list1)
+# list2 = []
+# for x in list1:
+#     list2.append(list(x))
+# # print(list2)    
+# list3 = []
+# for x in list2:
+#     x.sort()
+#     list3.append(x)
+# list3.sort()    
+# print(list3)
+# nameList = []
+# for x in name1:
+#     nameList.append(x)
+
+# nameList.sort()    
+# # nameList.append(list2)
+# # print(nameList)   
+# nameStr = ''
+# for x in nameList:
+#     nameStr += x + '\n'
+# str1 = ''
+# str2 = ''
+# count = 0
+# val = 0
+# # for x in list3:
+# #     for y in x:
+# #         str2 += y
+# #         count+= 1
+# #         if count == int(num1): 
+# #             str1 += str2 + '\n'
+# #             count = 0
+# #             str2 = ''
+
+# # for x in range(1,int(num1)+1):
+# #     # print(x)    
+# #     for y in list3:
+# #         print(y)    
+
+# test1 = []
+# for x in list3:
+#     # print(x)
+#     for y in x:
+#         # print(y)
+#         if y not in test1:
+#             test1.append(y)
+# test2 = []            
+# for x in range(1,int(num1)+1):
+#     for y in list3:
+#         if len(y[:x]) > 1:
+#             test1.append(y[:x])
+#         elif len(y[x:]) > 1:
+#              test1.append(y[:x])  
+# # print(test1)
+
+# for x in test1:
+#     print("".join(x))        
+
+# ------------------------------------------#
+# text1 = input().split(' ')
+# # print(text1)
+# name1 = text1[0]
+# num1 = text1[1]
+
+# from itertools import combinations
+# list4 = []
+# for x in range(1,int(num1)+1):
+#     list4.append(list(combinations(name1,int(x))))
+# list4.sort()
+# # print(list4)
+# list5 = []
+# for x in list4:
+#     # x.sort()
+#     for y in x:
+#         list5.append(list(y))
+#         # print("".join(y))
+# print(list5)
+# list6 = []
+# for x in list5:
+#     x.sort()
+#     print(x)
+#     list6.append(x)
+#     # print("".join(x))
+# print(list6)    
+# list6.sort()
+# lst1 = sorted(list6, key=len)
+# print(lst1)    
+
+# for x in lst1:
+#     print("".join(x))
+
+#lst1 = sorted(list6, key=len) to sort using len
+
+#check subset
+# num1 = int(input())
+
+# aEl = []
+# bEl = []
+# for _ in range(num1):
+#     aNum = int(input())
+#     aEl.append(list(map(int, input().split(' '))))
+#     bNum = int(input())
+#     bEl.append(list(map(int, input().split(' '))))
+    
+# # print(aEl) 
+# # print(bEl[0])   
+# # # print(aEl[0] in bEl[0])
+# # for x in aEl:
+# #     print(x)
+# #         # print(x in bEl[0])
+   
+# # count = 0
+# # for x in range(len(aEl)):
+# #     # print(aEl[x] in bEl[x])
+# #     # print(bEl[x])
+# #     for y in aEl[x]:
+# #         print(y)
+# check1 = []
+# for x in range(num1):
+#     print(bEl[x])
+#     for y in aEl[x]:
+#         # print(y in bEl[x])
+#         if y in bEl[x]:
+#             check = True
+#         else:
+#             check = False
+#             break
+#     check1.append(check)            
+
+# for x in check1:
+#     print(x)
+
+
+#plus minus
+# def plusMinus(arr):
+#     # print(arr)
+#     pos1 = 0
+#     neg1 = 0
+#     z1 = 0
+#     for x in arr:
+#         if x > 0:
+#             pos1 += 1
+#         elif x < 0:
+#             neg1 += 1    
+#         else:
+#              z1 += 1   
+#     print("{0:.5f}".format(pos1/len(arr)))
+#     print("{0:.5f}".format(neg1/len(arr)))         
+#     print("{0:.5f}".format(z1/len(arr)))         
+             
+
+# if __name__ == '__main__':
+#     n = int(input().strip())
+
+#     arr = list(map(int, input().rstrip().split()))
+
+#     plusMinus(arr)
+# def staircase(n):
+#     test = ''
+#     for x in reversed(range(1,n)):
+#         test += x*' '+'\n'
+#         for y in range(1,n+1):
+#             test += y*'#'+'\n'
+#     print(test)            
+
+
+# n = int(input().strip())
+
+# staircase(n)
+
+
+# compare the triplets
+n1 = list(map(int,input().split(' ')))
+n2 = list(map(int,input().split(' ')))
+
+# print(n1,n2)
+
+n1Count = 0
+n2Count = 0
+for x in range(len(n1)):
+    # print(n1[x] > n2[x])
+    if n1[x] > n2[x]:
+        n1Count += 1
+    elif n1[x] < n2[x]:
+        n2Count += 1     
+print(n1Count,n2Count)
+
 
