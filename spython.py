@@ -451,6 +451,7 @@
 from collections import namedtuple
 from pickle import TRUE
 from re import A
+from time import time
 
 from numpy import append
 from pyrsistent import b
@@ -939,7 +940,7 @@ print('-------Day 9-------')
 
 #triangles
 
-n = 5
+# n = 5
 
 # for x in range(n+1):
 #         print('#'*x)
@@ -958,9 +959,34 @@ n = 5
 #     print() #changes lines   
 
 
-for i in range(1,n+1):
-    for j in range(i,n): #to reverse 
-        print(' ',end='') #we dont want to automaticcaly change lines
-    for k in range(i):
-        print('*',end='')
-    print() #changes lines   
+# for i in range(1,n+1):
+#     for j in range(i,n): #to reverse 
+#         print(' ',end='') #we dont want to automaticcaly change lines
+#     for k in range(i):
+#         print('*',end='')
+#     print() #changes lines   
+
+n1 = input().split(":")
+
+def timeConversion(s):
+    lst1 = []
+    print(s)
+    if s[-1][-2:] == 'AM':
+        if s[0] == '12':
+            s[0] = '00'
+        lst1.append(str(s[0]))
+        lst1.append(str(s[1]))
+        lst1.append(str(s[2][:-2]))
+        lst1 = ":".join(lst1)
+        print(lst1)
+    elif s[-1][-2:] == 'PM':
+        if s[0] == '12':
+            s[0] = int(s[0])
+        else:    
+            s[0] = int(s[0]) + 12
+        lst1.append(str(s[0]))
+        lst1.append(str(s[1]))
+        lst1.append(str(s[2][:-2]))
+        lst1 = ":".join(lst1)
+        print(lst1)
+timeConversion(n1)
