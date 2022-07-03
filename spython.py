@@ -917,21 +917,50 @@ print('-------Day 9-------')
 
 
 # Grading students
-n1 = int(input())
-El = []
-for _ in range(n1):
-    El.append(int(input()))
+# n1 = int(input())
+# El = []
+# for _ in range(n1):
+#     El.append(int(input()))
 
-for x in El:
-    # print(x).
-    if x >= 38:
-        if (x % 5) > 2 and (x % 5) < 5:
-            pos = El.index(x)
-            # print(x % 5)
-            while(x % 5 != 0):
-                x += 1
-            El[pos] = x    
-# print(El)
+# for x in El:
+#     # print(x).
+#     if x >= 38:
+#         if (x % 5) > 2 and (x % 5) < 5:
+#             pos = El.index(x)
+#             # print(x % 5)
+#             while(x % 5 != 0):
+#                 x += 1
+#             El[pos] = x    
+# # print(El)
 
-for x in El:
-    print(x)
+# for x in El:
+#     print(x)
+
+
+#triangles
+
+n = 5
+
+# for x in range(n+1):
+#         print('#'*x)
+# for x in reversed(range(n+1)):
+#     print('#'*x)
+
+# for i in range(n+1):
+#     for j in range(i): 
+#         print('*',end='') #we dont want to automaticcaly change lines
+#     print() #changes lines   
+
+#reverse star
+# for i in range(n+1):
+#     for j in range(i,n): #to reverse 
+#         print('*',end='') #we dont want to automaticcaly change lines
+#     print() #changes lines   
+
+
+for i in range(1,n+1):
+    for j in range(i,n): #to reverse 
+        print(' ',end='') #we dont want to automaticcaly change lines
+    for k in range(i):
+        print('*',end='')
+    print() #changes lines   
