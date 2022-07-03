@@ -583,7 +583,7 @@ print('-------Day 9-------')
 #     xyz.
 
 
-#collection deque
+# collection deque
 # from collections import deque
 # d = deque()
 # # print(d)
@@ -593,18 +593,18 @@ print('-------Day 9-------')
 # for _ in range(num1):
 #     # task += (input('>')) + '\n'
 #     task.append(input().split(' '))
-# # print(task)    
+# # print(task)
 
 # for x in task:
 #     # print(x[0])
 #     if x[0] == 'append':
 #         d.append(x[1])
 #     elif x[0] == 'appendleft':
-#         d.appendleft(x[1])    
+#         d.appendleft(x[1])
 #     elif x[0] == 'pop':
-#         d.pop()    
+#         d.pop()
 #     elif x[0] == 'popleft':
-#         d.popleft()    
+#         d.popleft()
 # # print(d)
 
 # str1 = ''
@@ -612,10 +612,10 @@ print('-------Day 9-------')
 #     str1 += x + ' '
 # print(str1)
 
-#set .discard() pop()
+# set .discard() pop()
 # s = set([1])
 
-# n1 = int(input()) 
+# n1 = int(input())
 # # nEl = []
 # nEl = list(map(int,input().split(' ')))
 # # print(nEl)
@@ -625,13 +625,13 @@ print('-------Day 9-------')
 # for _ in range(n2):
 #     nCom.append(input().split(' '))
 # # print(nEl)
-# # print(nCom)    
+# # print(nCom)
 
 # s = set([])
 # for x in nEl:
 #     # print(x)
 #     s.add(x)
-# # print(s)    
+# # print(s)
 
 # for x in nCom:
 #     if x[0] == 'pop':
@@ -648,10 +648,10 @@ print('-------Day 9-------')
 # if not s:
 #     s.add(0)
 
-# sum1 = 0    
+# sum1 = 0
 # for x in s:
-#     sum1 += x    
-# print(sum1)  
+#     sum1 += x
+# print(sum1)
 
 #iterables and iterators
 # from itertools import combinations
@@ -676,16 +676,16 @@ print('-------Day 9-------')
 #     # elif str1[1] in x:
 #     #     count+=1
 
-# print(count/len(per1))        
+# print(count/len(per1))
 
-#list
+# list
 # list1 = []
 # n = int(input())
 
 # nCom = []
 # for _ in range(n):
 #     nCom.append(input().split(' '))
-# # print(nCom)    
+# # print(nCom)
 
 # for x in nCom:
 #     # print(x)
@@ -700,11 +700,11 @@ print('-------Day 9-------')
 #     elif x[0] == 'sort':
 #         list1.sort()
 #     elif x[0] == 'pop':
-#         list1.pop() 
+#         list1.pop()
 #     elif x[0] == 'reverse':
-#         list1.reverse()   
+#         list1.reverse()
 
-#itertolls combination
+# itertolls combination
 # text1 = input().split(' ')
 # # print(text1)
 # name1 = text1[0]
@@ -717,20 +717,20 @@ print('-------Day 9-------')
 # list2 = []
 # for x in list1:
 #     list2.append(list(x))
-# # print(list2)    
+# # print(list2)
 # list3 = []
 # for x in list2:
 #     x.sort()
 #     list3.append(x)
-# list3.sort()    
+# list3.sort()
 # print(list3)
 # nameList = []
 # for x in name1:
 #     nameList.append(x)
 
-# nameList.sort()    
+# nameList.sort()
 # # nameList.append(list2)
-# # print(nameList)   
+# # print(nameList)
 # nameStr = ''
 # for x in nameList:
 #     nameStr += x + '\n'
@@ -742,15 +742,15 @@ print('-------Day 9-------')
 # #     for y in x:
 # #         str2 += y
 # #         count+= 1
-# #         if count == int(num1): 
+# #         if count == int(num1):
 # #             str1 += str2 + '\n'
 # #             count = 0
 # #             str2 = ''
 
 # # for x in range(1,int(num1)+1):
-# #     # print(x)    
+# #     # print(x)
 # #     for y in list3:
-# #         print(y)    
+# #         print(y)
 
 # test1 = []
 # for x in list3:
@@ -759,17 +759,17 @@ print('-------Day 9-------')
 #         # print(y)
 #         if y not in test1:
 #             test1.append(y)
-# test2 = []            
+# test2 = []
 # for x in range(1,int(num1)+1):
 #     for y in list3:
 #         if len(y[:x]) > 1:
 #             test1.append(y[:x])
 #         elif len(y[x:]) > 1:
-#              test1.append(y[:x])  
+#              test1.append(y[:x])
 # # print(test1)
 
 # for x in test1:
-#     print("".join(x))        
+#     print("".join(x))
 
 # ------------------------------------------#
 # text1 = input().split(' ')
@@ -796,17 +796,17 @@ print('-------Day 9-------')
 #     print(x)
 #     list6.append(x)
 #     # print("".join(x))
-# print(list6)    
+# print(list6)
 # list6.sort()
 # lst1 = sorted(list6, key=len)
-# print(lst1)    
+# print(lst1)
 
 # for x in lst1:
 #     print("".join(x))
 
-#lst1 = sorted(list6, key=len) to sort using len
+# lst1 = sorted(list6, key=len) to sort using len
 
-#check subset
+# check subset
 # num1 = int(input())
 
 # aEl = []
@@ -816,14 +816,14 @@ print('-------Day 9-------')
 #     aEl.append(list(map(int, input().split(' '))))
 #     bNum = int(input())
 #     bEl.append(list(map(int, input().split(' '))))
-    
-# # print(aEl) 
-# # print(bEl[0])   
+
+# # print(aEl)
+# # print(bEl[0])
 # # # print(aEl[0] in bEl[0])
 # # for x in aEl:
 # #     print(x)
 # #         # print(x in bEl[0])
-   
+
 # # count = 0
 # # for x in range(len(aEl)):
 # #     # print(aEl[x] in bEl[x])
@@ -840,13 +840,13 @@ print('-------Day 9-------')
 #         else:
 #             check = False
 #             break
-#     check1.append(check)            
+#     check1.append(check)
 
 # for x in check1:
 #     print(x)
 
 
-#plus minus
+# plus minus
 # def plusMinus(arr):
 #     # print(arr)
 #     pos1 = 0
@@ -856,13 +856,13 @@ print('-------Day 9-------')
 #         if x > 0:
 #             pos1 += 1
 #         elif x < 0:
-#             neg1 += 1    
+#             neg1 += 1
 #         else:
-#              z1 += 1   
+#              z1 += 1
 #     print("{0:.5f}".format(pos1/len(arr)))
-#     print("{0:.5f}".format(neg1/len(arr)))         
-#     print("{0:.5f}".format(z1/len(arr)))         
-             
+#     print("{0:.5f}".format(neg1/len(arr)))
+#     print("{0:.5f}".format(z1/len(arr)))
+
 
 # if __name__ == '__main__':
 #     n = int(input().strip())
@@ -876,7 +876,7 @@ print('-------Day 9-------')
 #         test += x*' '+'\n'
 #         for y in range(1,n+1):
 #             test += y*'#'+'\n'
-#     print(test)            
+#     print(test)
 
 
 # n = int(input().strip())
@@ -885,19 +885,53 @@ print('-------Day 9-------')
 
 
 # compare the triplets
-n1 = list(map(int,input().split(' ')))
-n2 = list(map(int,input().split(' ')))
+# n1 = list(map(int,input().split(' ')))
+# n2 = list(map(int,input().split(' ')))
 
-# print(n1,n2)
+# # print(n1,n2)
 
-n1Count = 0
-n2Count = 0
-for x in range(len(n1)):
-    # print(n1[x] > n2[x])
-    if n1[x] > n2[x]:
-        n1Count += 1
-    elif n1[x] < n2[x]:
-        n2Count += 1     
-print(n1Count,n2Count)
+# n1Count = 0
+# n2Count = 0
+# for x in range(len(n1)):
+#     # print(n1[x] > n2[x])
+#     if n1[x] > n2[x]:
+#         n1Count += 1
+#     elif n1[x] < n2[x]:
+#         n2Count += 1
+# print(n1Count,n2Count)
 
 
+# min-max
+# n1 = list(map(int,input().split(' ')))
+
+# min1 = n1[0]
+# max1 = n1[0]
+# for x in n1:
+#     if x > max1:
+#         max1 = x
+#     if x < min1:
+#         min1 = x
+
+# # print(min1,max1)
+# print(sum(n1)-max1,sum(n1)-min1)
+
+
+# Grading students
+n1 = int(input())
+El = []
+for _ in range(n1):
+    El.append(int(input()))
+
+for x in El:
+    # print(x).
+    if x >= 38:
+        if (x % 5) > 2 and (x % 5) < 5:
+            pos = El.index(x)
+            # print(x % 5)
+            while(x % 5 != 0):
+                x += 1
+            El[pos] = x    
+# print(El)
+
+for x in El:
+    print(x)
