@@ -448,6 +448,7 @@
 # print(len(set1.union(french)))
 
 # string formatting
+from cgi import print_form
 from collections import namedtuple
 from pickle import TRUE
 from re import A
@@ -931,14 +932,14 @@ print('-------Day 9-------')
 #             # print(x % 5)
 #             while(x % 5 != 0):
 #                 x += 1
-#             El[pos] = x    
+#             El[pos] = x
 # # print(El)
 
 # for x in El:
 #     print(x)
 
 
-#triangles
+# triangles
 
 # n = 5
 
@@ -948,45 +949,84 @@ print('-------Day 9-------')
 #     print('#'*x)
 
 # for i in range(n+1):
-#     for j in range(i): 
+#     for j in range(i):
 #         print('*',end='') #we dont want to automaticcaly change lines
-#     print() #changes lines   
+#     print() #changes lines
 
-#reverse star
+# reverse star
 # for i in range(n+1):
-#     for j in range(i,n): #to reverse 
+#     for j in range(i,n): #to reverse
 #         print('*',end='') #we dont want to automaticcaly change lines
-#     print() #changes lines   
+#     print() #changes lines
 
 
 # for i in range(1,n+1):
-#     for j in range(i,n): #to reverse 
+#     for j in range(i,n): #to reverse
 #         print(' ',end='') #we dont want to automaticcaly change lines
 #     for k in range(i):
 #         print('*',end='')
-#     print() #changes lines   
+#     print() #changes lines
 
-n1 = input().split(":")
+# n1 = input().split(":")
 
-def timeConversion(s):
-    lst1 = []
-    print(s)
-    if s[-1][-2:] == 'AM':
-        if s[0] == '12':
-            s[0] = '00'
-        lst1.append(str(s[0]))
-        lst1.append(str(s[1]))
-        lst1.append(str(s[2][:-2]))
-        lst1 = ":".join(lst1)
-        print(lst1)
-    elif s[-1][-2:] == 'PM':
-        if s[0] == '12':
-            s[0] = int(s[0])
-        else:    
-            s[0] = int(s[0]) + 12
-        lst1.append(str(s[0]))
-        lst1.append(str(s[1]))
-        lst1.append(str(s[2][:-2]))
-        lst1 = ":".join(lst1)
-        print(lst1)
-timeConversion(n1)
+# def timeConversion(s):
+#     lst1 = []
+#     print(s)
+#     if s[-1][-2:] == 'AM':
+#         if s[0] == '12':
+#             s[0] = '00'
+#         lst1.append(str(s[0]))
+#         lst1.append(str(s[1]))
+#         lst1.append(str(s[2][:-2]))
+#         lst1 = ":".join(lst1)
+#         print(lst1)
+#     elif s[-1][-2:] == 'PM':
+#         if s[0] == '12':
+#             s[0] = int(s[0])
+#         else:
+#             s[0] = int(s[0]) + 12
+#         lst1.append(str(s[0]))
+#         lst1.append(str(s[1]))
+#         lst1.append(str(s[2][:-2]))
+#         lst1 = ":".join(lst1)
+#         print(lst1)
+# timeConversion(n1)
+
+
+# n1 = int(input())
+# lst1 = list(map(int, input().split(' ')))
+
+# print(lst1)
+
+# min1 = lst1[0]
+# max1 = lst1[0]
+# c1 = 0
+# c2 = 0
+# for x in lst1:
+#     if min1 < x:
+#         min1 = x
+#         c1 += 1
+#     if max1  > x:
+#         max1 = x
+#         c2 += 1
+# # print(max1)
+# # print(min1)           
+# print(c1,c2)
+
+
+#division sun pairs
+lst1 = list(map(int,input().split(' ')))
+lst2 = list(map(int,input().split(' ')))
+
+# print(lst1[1])
+print(len(lst2))
+
+count = 0
+for x in lst2:
+    for y in lst2:
+        # print(x,y)
+        if x < y:
+            if (x+y)%lst1[1] == 0:
+                # print(x,y)
+                count += 1
+print(count)            
