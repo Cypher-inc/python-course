@@ -448,11 +448,13 @@
 # print(len(set1.union(french)))
 
 # string formatting
+from calendar import different_locale
 from cgi import print_form
 from collections import namedtuple
 from pickle import TRUE
-from re import A
+from re import A, sub
 from time import time
+from black import diff
 
 from numpy import append
 from pyrsistent import b
@@ -1044,3 +1046,99 @@ print('-------Day 9-------')
 #                 count += 1
 #             j += 1
 #     return count
+
+#subarray division
+# n1 = input()
+# s = list(map(int,input().split(' ')))
+# d,m = list(map(int,input().split(' ')))
+
+# # print(s[0:m])
+# count = 0
+# for x in range(len(s)):
+#     # print(s[x:x+m])
+#     if len(s[x:x+m]) == m:
+#         if sum(s[x:x+m]) == d:
+#             count += 1
+# print(count)    
+
+#sales by match
+# n = int(input())
+# arr1 = list(map(int,input().split(' ')))
+
+# def sockMerchant(n, ar):
+#     # Write your code here
+#     lst1 = []
+#     test_list = list(set(ar))
+#     for x in test_list:
+#         if ar.count(x) > 1:
+#             lst1.append(x)
+#     print(len(lst1))
+# sockMerchant(n,arr1)
+
+# import math 
+# n = int(input())
+# arr1 = list(map(int,input().split(' ')))
+
+# def sockMerchant(n, ar):
+#     # Write your code here
+#     lst1 = []
+#     test_list = list(set(ar))
+#     for x in test_list:
+#         if ar.count(x) > 1:
+#             # print(math.floor(ar.count(x)/2))
+#             lst1.append(math.floor(ar.count(x)/2))
+#     print(sum(lst1))
+# sockMerchant(n,arr1)
+
+#bill division
+# def bonAppetit(bill, k, cost):
+#     # for x in range(k):
+#     #     bill.remove(k[x])
+#     bill.remove(bill[k])
+#     sum1 = sum(bill)/2
+#     if cost == sum1:
+#         print('Bon Appetit')
+#     else:
+#         print('{0:.0f}'.format(cost-sum1))    
+
+# n, k = list(map(int,input().split(' ')))  
+# bill = list(map(int, input().split(' ')))
+# cost = int(input())
+
+# bonAppetit(bill,k,cost)
+
+#Cat and Mouse (Tom and jerry)
+
+# q = int(input())
+# lst1 = []
+# for x in range(q):
+#     lst1.append(list(map(int,input().split(' '))))
+
+# # print(lst1)
+# for x in lst1:
+#     # print(abs(x[0]-x[2]),abs(x[1]-x[2]))
+#     if abs(x[0]-x[2]) > abs(x[1]-x[2]):
+#         print('Cat B')
+#     elif abs(x[0]-x[2]) == abs(x[1]-x[2]):
+#         print('Mouse C')
+#     elif abs(x[0]-x[2]) < abs(x[1]-x[2]):
+#         print('Cat A')    
+
+#electronic shop
+budget1 = list(map(int, input().split(' ')))
+key1 = list(map(int, input().split(' ')))
+drive1 = list(map(int, input().split(' ')))
+
+b = budget1[0]
+# print(key1)
+# print(drive1)
+lst1 = []
+for x in key1:
+    for y in drive1:
+        # print(x,y)
+        if x+y <= b:
+            lst1.append(x+y)
+if not len(lst1):
+    print(-1)    
+else:    
+    print(max(lst1))        

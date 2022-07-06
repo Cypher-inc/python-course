@@ -998,46 +998,4 @@ alex.talk()
 #     name = []
 #     for _ in range(n):
 #         name = map(str,input().split())
-#     print(name)
-#     # set1 = set(name)
-#     # print(set1)
-#     # for x in name:
-#     #     print(x)
-
-# multi line input
-# for _ in range(n):
-#         name.append(input())
-
-# if __name__ == '__main__':
-#     n = int(input())
-#     name = []
-#     for _ in range(n):
-#         name.append(input())
-#     # print(name)
-#     print(len(set(name)))
-
-    # list1 = []
-    # for x in name:
-    #     for y in x:
-    #         print(y)
-    #         list1.append(y)
-    # print(set(list1),len(set(list1)))
-
-#set difference 
-# totalEng = int(input())
-# eng = input().split(' ')
-# totalFrench = int(input())
-# french = input().split(' ')
-# # print(totalEng, eng)
-# # print(totalFrench,french)
-# s1 = set(eng)
-# print(len(s1.difference(french)))
-
-#set union 
-# engTotal = int(input())
-# eng = input().split(' ')
-# frenchTotal = int(input())
-# french = input().split(' ')
-
-# set1 = set(eng)
-# print(len(set1.union(french)))
+#
