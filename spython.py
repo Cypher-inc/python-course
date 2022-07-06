@@ -456,7 +456,7 @@ from re import A, sub
 from time import time
 from black import diff
 
-from numpy import append
+from numpy import append, intp
 from pyrsistent import b
 print('-------Day 9-------')
 # def print_formatted(number):
@@ -1158,15 +1158,33 @@ print('-------Day 9-------')
 #     print(0)    
 
 #migratory birds
-n = int(input())
-arr1 = list(map(int,input().split(' ')))
+# n = int(input())
+# arr1 = list(map(int,input().split(' ')))
 
-lst1 = list(set(arr1))
-lst2 = []
-for x in lst1:
-    # print(x)
-    lst2.append(arr1.count(x))
-    pos = lst2.index(max(lst2))
+# lst1 = list(set(arr1))
+# lst2 = []
+# for x in lst1:
+#     # print(x)
+#     lst2.append(arr1.count(x))
+#     pos = lst2.index(max(lst2))
         
-print(lst1[pos])
+# print(lst1[pos])
 
+#counting vallet
+n1 = int(input())
+arr1 = input()
+
+count = 1
+count1 = 0
+for x in arr1:
+    # print(x)
+    if x == 'U':
+        count += 1
+    elif x == 'D':
+        count -=1 
+        
+    if count == 1:
+       if x == 'U':
+          count1 += 1
+            
+print(count1) 
