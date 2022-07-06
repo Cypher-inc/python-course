@@ -1125,20 +1125,48 @@ print('-------Day 9-------')
 #         print('Cat A')    
 
 #electronic shop
-budget1 = list(map(int, input().split(' ')))
-key1 = list(map(int, input().split(' ')))
-drive1 = list(map(int, input().split(' ')))
+# budget1 = list(map(int, input().split(' ')))
+# key1 = list(map(int, input().split(' ')))
+# drive1 = list(map(int, input().split(' ')))
 
-b = budget1[0]
-# print(key1)
-# print(drive1)
-lst1 = []
-for x in key1:
-    for y in drive1:
-        # print(x,y)
-        if x+y <= b:
-            lst1.append(x+y)
-if not len(lst1):
-    print(-1)    
-else:    
-    print(max(lst1))        
+# b = budget1[0]
+# # print(key1)
+# # print(drive1)
+# lst1 = []
+# for x in key1:
+#     for y in drive1:
+#         # print(x,y)
+#         if x+y <= b:
+#             lst1.append(x+y)
+# if not len(lst1):
+#     print(-1)    
+# else:    
+#     print(max(lst1))    
+
+# Hurdle race
+# arr1 = list(map(int,input().split(' '))) 
+# arr2 = list(map(int,input().split(' ')))
+
+# # print(arr1)
+# # print(arr2)
+# k = arr1[1]
+
+# max1 = max(arr2)
+# if max1 > k:
+#     print(max1 - k)
+# else:
+#     print(0)    
+
+#migratory birds
+n = int(input())
+arr1 = list(map(int,input().split(' ')))
+
+lst1 = list(set(arr1))
+lst2 = []
+for x in lst1:
+    # print(x)
+    lst2.append(arr1.count(x))
+    pos = lst2.index(max(lst2))
+        
+print(lst1[pos])
+
