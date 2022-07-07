@@ -1171,20 +1171,39 @@ print('-------Day 9-------')
 # print(lst1[pos])
 
 #counting vallet
-n1 = int(input())
-arr1 = input()
+# n1 = int(input())
+# arr1 = input()
 
-count = 1
-count1 = 0
-for x in arr1:
-    # print(x)
-    if x == 'U':
-        count += 1
-    elif x == 'D':
-        count -=1 
+# count = 1
+# count1 = 0
+# for x in arr1:
+#     # print(x)
+#     if x == 'U':
+#         count += 1
+#     elif x == 'D':
+#         count -=1 
         
-    if count == 1:
-       if x == 'U':
-          count1 += 1
+#     if count == 1:
+#        if x == 'U':
+#           count1 += 1
             
-print(count1) 
+# print(count1) 
+
+#utopian tree initial value starts at 0
+n = int(input())
+arr1 = []
+for _ in range(n):
+    arr1.append(int(input()))
+
+lst1 = []
+for x in arr1:
+    size1 = 0 
+    for y in range(x+1):
+        if y%2 == 1:
+            size1 *= 2
+        else:
+            size1 += 1
+    lst1.append(size1)
+for x in lst1:
+    print(x)                
+                 
