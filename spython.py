@@ -1190,20 +1190,69 @@ print('-------Day 9-------')
 # print(count1) 
 
 #utopian tree initial value starts at 0
-n = int(input())
-arr1 = []
-for _ in range(n):
-    arr1.append(int(input()))
+# n = int(input())
+# arr1 = []
+# for _ in range(n):
+#     arr1.append(int(input()))
 
-lst1 = []
-for x in arr1:
-    size1 = 0 
-    for y in range(x+1):
-        if y%2 == 1:
-            size1 *= 2
-        else:
-            size1 += 1
-    lst1.append(size1)
-for x in lst1:
-    print(x)                
+# lst1 = []
+# for x in arr1:
+#     size1 = 0 
+#     for y in range(x+1):
+#         if y%2 == 1:
+#             size1 *= 2
+#         else:
+#             size1 += 1
+#     lst1.append(size1)
+# for x in lst1:
+#     print(x)                
                  
+
+#Designer PDF viewer
+# print(ord('a')-97)
+
+# arr1 = list(map(int,input().split(' ')))
+# word1 = input()
+
+# # print(arr1,word1)
+# lst1 = []
+# for x in word1:
+#     # print(ord(x)-97)
+#     n1 = ord(x)-97
+#     # print(arr1[n1])
+#     lst1.append(arr1[n1])
+
+# max1 = max(lst1)
+# print(len(word1)*max1)    
+
+
+#Angry professor
+n1 = int(input())
+arr1 = []
+arr2 = []
+for _ in range(n1):
+    arr1.append(list(map(int,input().split(' '))))
+    arr2.append(list(map(int,input().split(' '))))
+
+lst1 = [] 
+for x in range(len(arr1)):
+    n,k = arr1[x]
+    lst1.append(k)
+# print(lst1)    
+
+lst2 = []
+for x in arr2:
+    count1 = 0
+    for y in x:
+        if y <= 0:
+            count1 += 1
+    lst2.append(count1)    
+    # print(lst1[y])      
+
+print(lst1,lst2)    
+for x in range(len(lst1)):
+    if lst1[x] > lst2[x]:
+        print("YES")
+    else:
+        print('NO')            
+        
