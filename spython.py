@@ -454,6 +454,7 @@ from collections import namedtuple
 from pickle import TRUE
 from re import A, sub
 from time import time
+from tkinter import Y
 from black import diff
 
 from numpy import append, intp
@@ -1012,11 +1013,11 @@ print('-------Day 9-------')
 #         max1 = x
 #         c2 += 1
 # # print(max1)
-# # print(min1)           
+# # print(min1)
 # print(c1,c2)
 
 
-#division sun pairs
+# division sun pairs
 # lst1 = list(map(int,input().split(' ')))
 # lst2 = list(map(int,input().split(' ')))
 
@@ -1032,8 +1033,8 @@ print('-------Day 9-------')
 #                 # print(x,y)
 #                 count += 1
 # print(count)
- 
-###soln           
+
+# soln
 # lst1 = list(map(int,input().split(' ')))
 # lst2 = list(map(int,input().split(' ')))
 # def divisibleSumPairs(n, k, ar):
@@ -1047,7 +1048,7 @@ print('-------Day 9-------')
 #             j += 1
 #     return count
 
-#subarray division
+# subarray division
 # n1 = input()
 # s = list(map(int,input().split(' ')))
 # d,m = list(map(int,input().split(' ')))
@@ -1059,9 +1060,9 @@ print('-------Day 9-------')
 #     if len(s[x:x+m]) == m:
 #         if sum(s[x:x+m]) == d:
 #             count += 1
-# print(count)    
+# print(count)
 
-#sales by match
+# sales by match
 # n = int(input())
 # arr1 = list(map(int,input().split(' ')))
 
@@ -1075,7 +1076,7 @@ print('-------Day 9-------')
 #     print(len(lst1))
 # sockMerchant(n,arr1)
 
-# import math 
+# import math
 # n = int(input())
 # arr1 = list(map(int,input().split(' ')))
 
@@ -1090,7 +1091,7 @@ print('-------Day 9-------')
 #     print(sum(lst1))
 # sockMerchant(n,arr1)
 
-#bill division
+# bill division
 # def bonAppetit(bill, k, cost):
 #     # for x in range(k):
 #     #     bill.remove(k[x])
@@ -1099,9 +1100,9 @@ print('-------Day 9-------')
 #     if cost == sum1:
 #         print('Bon Appetit')
 #     else:
-#         print('{0:.0f}'.format(cost-sum1))    
+#         print('{0:.0f}'.format(cost-sum1))
 
-# n, k = list(map(int,input().split(' ')))  
+# n, k = list(map(int,input().split(' ')))
 # bill = list(map(int, input().split(' ')))
 # cost = int(input())
 
@@ -1122,9 +1123,9 @@ print('-------Day 9-------')
 #     elif abs(x[0]-x[2]) == abs(x[1]-x[2]):
 #         print('Mouse C')
 #     elif abs(x[0]-x[2]) < abs(x[1]-x[2]):
-#         print('Cat A')    
+#         print('Cat A')
 
-#electronic shop
+# electronic shop
 # budget1 = list(map(int, input().split(' ')))
 # key1 = list(map(int, input().split(' ')))
 # drive1 = list(map(int, input().split(' ')))
@@ -1139,12 +1140,12 @@ print('-------Day 9-------')
 #         if x+y <= b:
 #             lst1.append(x+y)
 # if not len(lst1):
-#     print(-1)    
-# else:    
-#     print(max(lst1))    
+#     print(-1)
+# else:
+#     print(max(lst1))
 
 # Hurdle race
-# arr1 = list(map(int,input().split(' '))) 
+# arr1 = list(map(int,input().split(' ')))
 # arr2 = list(map(int,input().split(' ')))
 
 # # print(arr1)
@@ -1155,9 +1156,9 @@ print('-------Day 9-------')
 # if max1 > k:
 #     print(max1 - k)
 # else:
-#     print(0)    
+#     print(0)
 
-#migratory birds
+# migratory birds
 # n = int(input())
 # arr1 = list(map(int,input().split(' ')))
 
@@ -1167,10 +1168,10 @@ print('-------Day 9-------')
 #     # print(x)
 #     lst2.append(arr1.count(x))
 #     pos = lst2.index(max(lst2))
-        
+
 # print(lst1[pos])
 
-#counting vallet
+# counting vallet
 # n1 = int(input())
 # arr1 = input()
 
@@ -1181,15 +1182,15 @@ print('-------Day 9-------')
 #     if x == 'U':
 #         count += 1
 #     elif x == 'D':
-#         count -=1 
-        
+#         count -=1
+
 #     if count == 1:
 #        if x == 'U':
 #           count1 += 1
-            
-# print(count1) 
 
-#utopian tree initial value starts at 0
+# print(count1)
+
+# utopian tree initial value starts at 0
 # n = int(input())
 # arr1 = []
 # for _ in range(n):
@@ -1197,7 +1198,7 @@ print('-------Day 9-------')
 
 # lst1 = []
 # for x in arr1:
-#     size1 = 0 
+#     size1 = 0
 #     for y in range(x+1):
 #         if y%2 == 1:
 #             size1 *= 2
@@ -1205,10 +1206,10 @@ print('-------Day 9-------')
 #             size1 += 1
 #     lst1.append(size1)
 # for x in lst1:
-#     print(x)                
-                 
+#     print(x)
 
-#Designer PDF viewer
+
+# Designer PDF viewer
 # print(ord('a')-97)
 
 # arr1 = list(map(int,input().split(' ')))
@@ -1223,36 +1224,150 @@ print('-------Day 9-------')
 #     lst1.append(arr1[n1])
 
 # max1 = max(lst1)
-# print(len(word1)*max1)    
+# print(len(word1)*max1)
 
 
-#Angry professor
-n1 = int(input())
-arr1 = []
-arr2 = []
-for _ in range(n1):
-    arr1.append(list(map(int,input().split(' '))))
-    arr2.append(list(map(int,input().split(' '))))
+# Angry professor
+# n1 = int(input())
+# arr1 = []
+# arr2 = []
+# for _ in range(n1):
+#     arr1.append(list(map(int,input().split(' '))))
+#     arr2.append(list(map(int,input().split(' '))))
 
-lst1 = [] 
+# lst1 = []
+# for x in range(len(arr1)):
+#     n,k = arr1[x]
+#     lst1.append(k)
+# # print(lst1)
+
+# lst2 = []
+# for x in arr2:
+#     count1 = 0
+#     for y in x:
+#         if y <= 0:
+#             count1 += 1
+#     lst2.append(count1)
+#     # print(lst1[y])
+
+# print(lst1,lst2)
+# for x in range(len(lst1)):
+#     if lst1[x] > lst2[x]:
+#         print("YES")
+#     else:
+#         print('NO')
+
+# viral advert
+# import math
+# n1 = int(input())
+
+# k1 = math.floor(5/2)
+# print(k1)
+# k1 = k1*3
+# print(math.floor(k1/2))
+
+# arr1 = []
+# for x in range(n1):
+#     if x == 0:
+#         k1 = math.floor(5/2)
+#         arr1.append(k1)
+#     # print(x)
+#     else:
+#         k1 = k1*3
+#         k1 = math.floor(k1/2)
+#         arr1.append(k1)
+# print(sum(arr1))
+
+
+# buitiful day at movies
+# arr1 = list(map(int, input().split(' ')))
+
+# # print(arr1)
+
+# ini1 = arr1[0]
+# fin1 = arr1[1]
+# k = arr1[2]
+
+# count1 = 0
+# for x in range(ini1,fin1+1):
+#     # print(x)
+#     rev1 = str(x)[::-1]
+#     # print((x-int(rev1))%k)
+#     check1 = (x-int(rev1))%k
+#     if check1 == 0:
+#         count1 += 1
+# print(count1)
+
+
+# jumping on the clouds
+# n,k = list(map(int,input().split(' ')))
+# arr2 = list(map(int,input().split(' ')))
+
+# count1 = 100
+# y = 0
+# for x in range(1,len(arr2)+1):
+
+#     y += 1
+#     if y == k:
+#         y = 0
+#         if x == 0:
+#             continue
+#         if x == n:
+#             x = 0
+#         # print(x)
+#         if arr2[x] == 1:
+#             count1 -= 2
+#         count1 -= 1
+#         y = 0
+# print(count1)
+
+# n,k = list(map(int,input().split(' ')))
+# arr2 = list(map(int,input().split(' ')))
+# count1 = 100
+
+# for x in range(0,len(arr2),k):
+#     # print(x)
+#     if arr2[x] == 1:
+#         count1 -= 2
+#     count1 -= 1
+# print(count1)
+
+
+# sequence equation
+# It took me a while to find this as well, so I'll leave this here for others facing the same frustration. Let's use sample input 0 as our example.
+# the input is:
+# 3
+# 2 3 1
+# Our expected output is also [2, 3, 1]
+# The first value 3 in our input is the length of the list, so it's not important for the purpose of finding our objective.
+# Our list, [2, 3, 1] needs to be used to define a new list. The new list starts from the minimum of the list (1), and ends with the maximum of the list (3).
+n = int(input())
+arr1 = list(map(int, input().split(' ')))
+
 for x in range(len(arr1)):
-    n,k = arr1[x]
-    lst1.append(k)
-# print(lst1)    
+    # print(arr1[x],x+1)
+    # if x == arr1[x]:
+    # print(arr1.index(x+1)+1)
+    pos1 = arr1.index(x+1)+1
+    # print(arr1.index(x+1)+1 , arr1.index(pos1)+1)
+    print(arr1.index(pos1)+1)
 
-lst2 = []
-for x in arr2:
-    count1 = 0
+
+#find digits
+n = int(input())
+arr1 = []
+for _ in range(n):
+    arr1.append((input()))
+# print(arr1)    
+lst1 = []
+for x in arr1:
+    count = 0
     for y in x:
-        if y <= 0:
-            count1 += 1
-    lst2.append(count1)    
-    # print(lst1[y])      
-
-print(lst1,lst2)    
-for x in range(len(lst1)):
-    if lst1[x] > lst2[x]:
-        print("YES")
-    else:
-        print('NO')            
-        
+        # print(y)
+        if int(y) == 0:
+            continue
+        elif int(x)%int(y) == 0:
+            count += 1
+    lst1.append(count)        
+for x in lst1:
+    print(x)    
