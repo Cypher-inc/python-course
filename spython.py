@@ -1353,12 +1353,12 @@ for x in range(len(arr1)):
     print(arr1.index(pos1)+1)
 
 
-#find digits
+# find digits
 n = int(input())
 arr1 = []
 for _ in range(n):
     arr1.append((input()))
-# print(arr1)    
+# print(arr1)
 lst1 = []
 for x in arr1:
     count = 0
@@ -1366,8 +1366,8 @@ for x in arr1:
         # print(y)
         if int(y) == 0:
             continue
-        elif int(x)%int(y) == 0:
+        elif int(x) % int(y) == 0:
             count += 1
-    lst1.append(count)        
+    lst1.append(count)
 for x in lst1:
-    print(x)    
+    print(x)
