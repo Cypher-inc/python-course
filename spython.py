@@ -452,7 +452,7 @@ from calendar import different_locale
 from cgi import print_form
 from collections import namedtuple
 from pickle import TRUE
-from re import A, sub
+from re import A, X, sub
 from time import time
 from tkinter import Y
 from black import diff
@@ -1341,33 +1341,86 @@ print('-------Day 9-------')
 # Our expected output is also [2, 3, 1]
 # The first value 3 in our input is the length of the list, so it's not important for the purpose of finding our objective.
 # Our list, [2, 3, 1] needs to be used to define a new list. The new list starts from the minimum of the list (1), and ends with the maximum of the list (3).
-n = int(input())
-arr1 = list(map(int, input().split(' ')))
+# n = int(input())
+# arr1 = list(map(int, input().split(' ')))
 
-for x in range(len(arr1)):
-    # print(arr1[x],x+1)
-    # if x == arr1[x]:
-    # print(arr1.index(x+1)+1)
-    pos1 = arr1.index(x+1)+1
-    # print(arr1.index(x+1)+1 , arr1.index(pos1)+1)
-    print(arr1.index(pos1)+1)
+# for x in range(len(arr1)):
+#     # print(arr1[x],x+1)
+#     # if x == arr1[x]:
+#     # print(arr1.index(x+1)+1)
+#     pos1 = arr1.index(x+1)+1
+#     # print(arr1.index(x+1)+1 , arr1.index(pos1)+1)
+#     print(arr1.index(pos1)+1)
 
 
 # find digits
-n = int(input())
-arr1 = []
-for _ in range(n):
-    arr1.append((input()))
-# print(arr1)
-lst1 = []
-for x in arr1:
-    count = 0
-    for y in x:
-        # print(y)
-        if int(y) == 0:
-            continue
-        elif int(x) % int(y) == 0:
-            count += 1
-    lst1.append(count)
-for x in lst1:
-    print(x)
+# n = int(input())
+# arr1 = []
+# for _ in range(n):
+#     arr1.append((input()))
+# # print(arr1)
+# lst1 = []
+# for x in arr1:
+#     count = 0
+#     for y in x:
+#         # print(y)
+#         if int(y) == 0:
+#             continue
+#         elif int(x) % int(y) == 0:
+#             count += 1
+#     lst1.append(count)
+# for x in lst1:
+#     print(x)
+
+
+#cut the sticks
+# n1 = int(input())
+# arr1 = list(map(int,input().split(' ')))
+
+# print(n1,arr1)
+
+# min1 = min(arr1)
+# lst1 = []
+# lst2 = []
+# for x in arr1:
+#     if x == min1:
+#         # print('yes')
+#         arr1.remove(x)
+#     else:    
+#         x -=min1
+#         lst1.append(x)
+# # lst2.append(len(lst1))
+# print(lst1)    
+
+# n1 = int(input())
+# arr1 = list(map(int,input().split(' ')))
+# min1 = min(arr1)
+# lst1 = arr1[:]
+
+    
+# for x in range(len(lst1)-1):
+#         if arr1[x] == min1:
+#                 lst1.remove(min1)
+# for x in range(len(lst1)):
+#         lst1[x] -= min1
+# print(lst1)
+
+# n1 = int(input())
+# arr1 = list(map(int,input().split(' ')))
+# min1 = min(arr1)
+# lst1 = arr1[:]
+
+# while(len(lst1) != 0):
+#         print(len(lst1)) 
+#         if len(lst1) < n1:
+#             min1 = min(lst1)  
+#             arr1 = lst1[:]  
+#         for x in range(len(lst1)):
+#             if arr1[x] == min1:
+#                 lst1.remove(min1)
+#         for x in range(len(lst1)):
+#             lst1[x] -= min1
+
+
+n1 = int(input())
+arr1 = list(map(int,input().split(' ')))
