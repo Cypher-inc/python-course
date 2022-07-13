@@ -451,8 +451,10 @@
 from calendar import different_locale
 from cgi import print_form
 from collections import namedtuple
+from operator import index
 from pickle import TRUE
 from re import A, X, sub
+from secrets import randbits
 from time import time
 from tkinter import Y
 from black import diff
@@ -1421,6 +1423,71 @@ print('-------Day 9-------')
 #         for x in range(len(lst1)):
 #             lst1[x] -= min1
 
+#jumping on clouds
+# n1 = int(input())
+# arr1 = list(map(int,input().split(' ')))
 
-n1 = int(input())
-arr1 = list(map(int,input().split(' ')))
+# count = 0
+# for x in range(0,n1,2):
+#     if arr1[x] != 1:
+#         print(x)
+#         count += 1
+#     elif arr1[x] == 1:
+#         print(x)
+#         count += 1    
+# print(count)        
+
+
+# n1 = int(input())
+# arr1 = list(map(int,input().split(' ')))
+# count = 0
+# for y in range(0,n1+1):
+#     # print(y)
+#     # if y%2 == 0:
+#     #     print(y)
+#     if count%2 == 0:
+#         # print(y)
+#         if arr1[count] != 1:
+#             print(count)
+#     count += 1
+
+#     if y == n1 and n1%2 != 0:
+#         print(y)    
+
+#eqalise the array
+# n1 = int(input())
+# arr1 = list(map(int,input().split(' ')))
+
+# lst1 = []
+# for x in arr1:
+#     lst1.append(arr1.count(x))
+
+# max1 = max(lst1)
+# pos = lst1.index(max1)
+# pos1 = arr1[pos]
+
+# lst3 =[]
+# for x in arr1:
+#     if x != pos1:
+#         lst3.append(x)
+# print(len(lst3))   
+
+# max1 = max(arr1)
+# lst1 = []
+# for x in arr1:
+#     if x != max1:
+#         lst1.append(x)
+# print(len(lst1))
+
+
+#service lane
+n,t = list(map(int,input().split(' ')))
+arr2 = list(map(int,input().split(' ')))
+
+lst1 = []
+for _ in range(t):
+    lst1.append(list(map(int,input().split(' '))))
+# print(lst1)    
+for x in lst1:
+    # print(x[0],x[1])
+    print(min(arr2[x[0]:x[1]+1]))
