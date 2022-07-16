@@ -1493,33 +1493,68 @@ print('-------Day 9-------')
 #     print(min(arr2[x[0]:x[1]+1]))
 
 
-str1 = input()
+# str1 = input()
 
-print(len(str1)/3)
-# count = 0
+# print(len(str1)/3)
+# # count = 0
+# # for x in str1:
+# #     # print(x)
+# #     if x != 'S' and x!= 'O':
+# #         count += 1
+# # print(count)        
+
+# c1 = ''
+# lst1 = []
 # for x in str1:
-#     # print(x)
-#     if x != 'S' and x!= 'O':
-#         count += 1
+#     c1 += x
+#     if len(c1) == 3:
+#         lst1.append(c1)
+#         c1 = ''
+        
+# # print(lst1)      
+# count = 0  
+# for x in lst1:
+#     print(x)
+#     if x != 'SOS':
+#         if x[0] != 'S' :
+#             count += 1
+#         if x[1] != 'O' :
+#             count += 1
+#         if x[2] != 'S' :
+#             count += 1
 # print(count)        
 
-c1 = ''
+
+#camelCase
+# word1 = input()
+
+# str1 = ''
+# count = 1 
+# for x in word1:
+#     # print(ord(x))
+#     if ord(x) < 97:
+#         # print(x)
+#         str1 += '\n' 
+#         count += 1
+#     str1 += x    
+# # print(str1)
+# print(count)
+
+
+#minimum distance
+n1 = int(input())
+arr1 = list(map(int,input().split(' ')))
+
+print(n1,arr1)
 lst1 = []
-for x in str1:
-    c1 += x
-    if len(c1) == 3:
-        lst1.append(c1)
-        c1 = ''
-        
-# print(lst1)      
-count = 0  
-for x in lst1:
-    print(x)
-    if x != 'SOS':
-        if x[0] != 'S' :
-            count += 1
-        if x[1] != 'O' :
-            count += 1
-        if x[2] != 'S' :
-            count += 1
-print(count)        
+for x in arr1:
+    if arr1.count(x) >= 2:
+        # print(x)
+        lst1.append(x)
+set1 = set(lst1)        
+
+for x in set1:
+    # print(x)
+    for y in arr1:
+        if x == y:
+            print(arr1.index(x))
