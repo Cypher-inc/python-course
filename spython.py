@@ -1545,16 +1545,28 @@ print('-------Day 9-------')
 n1 = int(input())
 arr1 = list(map(int,input().split(' ')))
 
-print(n1,arr1)
+# print(n1,arr1)
 lst1 = []
 for x in arr1:
     if arr1.count(x) >= 2:
         # print(x)
         lst1.append(x)
-set1 = set(lst1)        
+set1 = list(set(lst1))        
 
-for x in set1:
+lst2 = []
+for x in range(len(set1)):
     # print(x)
-    for y in arr1:
-        if x == y:
-            print(arr1.index(x))
+    dif1 = ''
+    for y in range(len(arr1)):
+        if set1[x] == arr1[y]:
+            # print(arr1.index(x))
+            if dif1 == '':
+                dif1 = y
+            else:    
+                dif1 -= y
+                lst2.append(abs(dif1))
+    # print(sum1)    
+if lst2:    
+    print(min(lst2))
+else:
+    print(-1)    
