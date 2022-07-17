@@ -1640,31 +1640,45 @@ print('-------Day 9-------')
 #             check = False
 # print(check)
 
-str1 = input()
+# str1 = input()
 
-str1 = str1.lower()
-str2 = str1.split(' ')
-# print(str2)
-lst = []
-for x in str2:
-    for y in x:
-        lst.append(ord(y))
+# str1 = str1.lower()
+# str2 = str1.split(' ')
+# # print(str2)
+# lst = []
+# for x in str2:
+#     for y in x:
+#         lst.append(ord(y))
         
-lst = list(set(lst))
-# print(lst)    
-# print(ord('a'),ord('z'))
-check = True
+# lst = list(set(lst))
+# # print(lst)    
+# # print(ord('a'),ord('z'))
+# check = True
 
-for x in range(97,123):
-    if x in lst:
-        continue
-    else:
-        check = False
-# print(check)        
+# for x in range(97,123):
+#     if x in lst:
+#         continue
+#     else:
+#         check = False
+# # print(check)        
 
-if check:
-    print('pangram')
-else:
-    print('not pangram')    
+# if check:
+#     print('pangram')
+# else:
+#     print('not pangram')    
 
 
+#scoring
+n1 = int(input())
+arr1 = []
+for _ in range(n1):
+    arr1.append(input())
+# print(arr1)    
+
+lst1 = []
+for x in arr1:
+    lst1.append(list(set(x)))
+# print(lst1)    
+
+for x in lst1:
+    print(len((x)))
