@@ -455,6 +455,7 @@ from operator import index
 from pickle import TRUE
 from re import A, X, sub
 from secrets import randbits
+import string
 from time import time
 from tkinter import Y
 from black import diff
@@ -1542,31 +1543,129 @@ print('-------Day 9-------')
 
 
 #minimum distance
-n1 = int(input())
-arr1 = list(map(int,input().split(' ')))
+# n1 = int(input())
+# arr1 = list(map(int,input().split(' ')))
 
-# print(n1,arr1)
-lst1 = []
-for x in arr1:
-    if arr1.count(x) >= 2:
-        # print(x)
-        lst1.append(x)
-set1 = list(set(lst1))        
+# # print(n1,arr1)
+# lst1 = []
+# for x in arr1:
+#     if arr1.count(x) >= 2:
+#         # print(x)
+#         lst1.append(x)
+# set1 = list(set(lst1))        
 
-lst2 = []
-for x in range(len(set1)):
-    # print(x)
-    dif1 = ''
-    for y in range(len(arr1)):
-        if set1[x] == arr1[y]:
-            # print(arr1.index(x))
-            if dif1 == '':
-                dif1 = y
-            else:    
-                dif1 -= y
-                lst2.append(abs(dif1))
-    # print(sum1)    
-if lst2:    
-    print(min(lst2))
+# lst2 = []
+# for x in range(len(set1)):
+#     # print(x)
+#     dif1 = ''
+#     for y in range(len(arr1)):
+#         if set1[x] == arr1[y]:
+#             # print(arr1.index(x))
+#             if dif1 == '':
+#                 dif1 = y
+#             else:    
+#                 dif1 -= y
+#                 lst2.append(abs(dif1))
+#     # print(sum1)    
+# if lst2:    
+#     print(min(lst2))
+# else:
+#     print(-1)    
+
+
+# hackerrank in a string
+# n1 = int(input())
+
+# arr1 = []
+# for _ in range(n1):
+#     arr1.append(input())
+# print(arr1)    
+
+# for x in arr1:
+#     # for y in x:
+#     #     print(y)
+#     check = False
+#     if 'h' in x:
+#         if 'a' in x:
+#             if 'c' in x:
+#                 if 'k' in x:
+#                     if 'e' in x:
+#                         if 'r' in x:
+#                             if 'r' in x:
+#                                 if 'a' in x:
+#                                     if 'n' in x:
+#                                         if 'c' in x:
+#                                             if 'k' in x:
+#                                                 check = True
+#     print(check)                                                    
+
+
+#gemstone
+# n1 = int(input())
+# arr1 = []
+# for _ in range(n1):
+#     arr1.append(input())
+# # print(arr1)   
+# lst1 = [] 
+# for x in arr1:
+#     for y in x:
+#         lst1.append(y)
+# lst2 = list(set(lst1))
+# # print(lst2)
+
+# count1 = 0
+# for x in lst2:
+#     count = 0
+#     # print(x)
+#     for y in arr1:
+#         if x in y:
+#             # print(x,y)
+#             count += 1
+#             if count == n1:
+#                 count1 += 1 
+# print(count1)                
+
+
+#pangrams
+# str = input()
+# check = True
+# for x in str:
+#     # print(x)
+#     for y in range(65,123):
+#         # print(x,y)
+#         if ord(x) == y:
+#             continue
+#         else:
+#             # print(y)
+#             check = False
+# print(check)
+
+
+str1 = input()
+
+str1 = str1.lower()
+str2 = str1.split(' ')
+# print(str2)
+lst = []
+for x in str2:
+    for y in x:
+        lst.append(ord(y))
+        
+lst = list(set(lst))
+# print(lst)    
+# print(ord('a'),ord('z'))
+check = True
+
+for x in range(97,123):
+    if x in lst:
+        continue
+    else:
+        check = False
+# print(check)        
+
+if check:
+    print('pangram')
 else:
-    print(-1)    
+    print('not pangram')    
+
+
