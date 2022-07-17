@@ -1640,7 +1640,6 @@ print('-------Day 9-------')
 #             check = False
 # print(check)
 
-
 str1 = input()
 
 str1 = str1.lower()
