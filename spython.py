@@ -1376,7 +1376,7 @@ print('-------Day 9-------')
 #     print(x)
 
 
-#cut the sticks
+# cut the sticks
 # n1 = int(input())
 # arr1 = list(map(int,input().split(' ')))
 
@@ -1389,18 +1389,18 @@ print('-------Day 9-------')
 #     if x == min1:
 #         # print('yes')
 #         arr1.remove(x)
-#     else:    
+#     else:
 #         x -=min1
 #         lst1.append(x)
 # # lst2.append(len(lst1))
-# print(lst1)    
+# print(lst1)
 
 # n1 = int(input())
 # arr1 = list(map(int,input().split(' ')))
 # min1 = min(arr1)
 # lst1 = arr1[:]
 
-    
+
 # for x in range(len(lst1)-1):
 #         if arr1[x] == min1:
 #                 lst1.remove(min1)
@@ -1414,17 +1414,17 @@ print('-------Day 9-------')
 # lst1 = arr1[:]
 
 # while(len(lst1) != 0):
-#         print(len(lst1)) 
+#         print(len(lst1))
 #         if len(lst1) < n1:
-#             min1 = min(lst1)  
-#             arr1 = lst1[:]  
+#             min1 = min(lst1)
+#             arr1 = lst1[:]
 #         for x in range(len(lst1)):
 #             if arr1[x] == min1:
 #                 lst1.remove(min1)
 #         for x in range(len(lst1)):
 #             lst1[x] -= min1
 
-#jumping on clouds
+# jumping on clouds
 # n1 = int(input())
 # arr1 = list(map(int,input().split(' ')))
 
@@ -1435,8 +1435,8 @@ print('-------Day 9-------')
 #         count += 1
 #     elif arr1[x] == 1:
 #         print(x)
-#         count += 1    
-# print(count)        
+#         count += 1
+# print(count)
 
 
 # n1 = int(input())
@@ -1453,9 +1453,9 @@ print('-------Day 9-------')
 #     count += 1
 
 #     if y == n1 and n1%2 != 0:
-#         print(y)    
+#         print(y)
 
-#eqalise the array
+# eqalise the array
 # n1 = int(input())
 # arr1 = list(map(int,input().split(' ')))
 
@@ -1471,7 +1471,7 @@ print('-------Day 9-------')
 # for x in arr1:
 #     if x != pos1:
 #         lst3.append(x)
-# print(len(lst3))   
+# print(len(lst3))
 
 # max1 = max(arr1)
 # lst1 = []
@@ -1481,14 +1481,14 @@ print('-------Day 9-------')
 # print(len(lst1))
 
 
-#service lane
+# service lane
 # n,t = list(map(int,input().split(' ')))
 # arr2 = list(map(int,input().split(' ')))
 
 # lst1 = []
 # for _ in range(t):
 #     lst1.append(list(map(int,input().split(' '))))
-# # print(lst1)    
+# # print(lst1)
 # for x in lst1:
 #     # print(x[0],x[1])
 #     print(min(arr2[x[0]:x[1]+1]))
@@ -1502,7 +1502,7 @@ print('-------Day 9-------')
 # #     # print(x)
 # #     if x != 'S' and x!= 'O':
 # #         count += 1
-# # print(count)        
+# # print(count)
 
 # c1 = ''
 # lst1 = []
@@ -1511,9 +1511,9 @@ print('-------Day 9-------')
 #     if len(c1) == 3:
 #         lst1.append(c1)
 #         c1 = ''
-        
-# # print(lst1)      
-# count = 0  
+
+# # print(lst1)
+# count = 0
 # for x in lst1:
 #     print(x)
 #     if x != 'SOS':
@@ -1523,26 +1523,26 @@ print('-------Day 9-------')
 #             count += 1
 #         if x[2] != 'S' :
 #             count += 1
-# print(count)        
+# print(count)
 
 
-#camelCase
+# camelCase
 # word1 = input()
 
 # str1 = ''
-# count = 1 
+# count = 1
 # for x in word1:
 #     # print(ord(x))
 #     if ord(x) < 97:
 #         # print(x)
-#         str1 += '\n' 
+#         str1 += '\n'
 #         count += 1
-#     str1 += x    
+#     str1 += x
 # # print(str1)
 # print(count)
 
 
-#minimum distance
+# minimum distance
 # n1 = int(input())
 # arr1 = list(map(int,input().split(' ')))
 
@@ -1552,7 +1552,7 @@ print('-------Day 9-------')
 #     if arr1.count(x) >= 2:
 #         # print(x)
 #         lst1.append(x)
-# set1 = list(set(lst1))        
+# set1 = list(set(lst1))
 
 # lst2 = []
 # for x in range(len(set1)):
@@ -1563,14 +1563,14 @@ print('-------Day 9-------')
 #             # print(arr1.index(x))
 #             if dif1 == '':
 #                 dif1 = y
-#             else:    
+#             else:
 #                 dif1 -= y
 #                 lst2.append(abs(dif1))
-#     # print(sum1)    
-# if lst2:    
+#     # print(sum1)
+# if lst2:
 #     print(min(lst2))
 # else:
-#     print(-1)    
+#     print(-1)
 
 
 # hackerrank in a string
@@ -1579,7 +1579,7 @@ print('-------Day 9-------')
 # arr1 = []
 # for _ in range(n1):
 #     arr1.append(input())
-# print(arr1)    
+# print(arr1)
 
 # for x in arr1:
 #     # for y in x:
@@ -1597,16 +1597,16 @@ print('-------Day 9-------')
 #                                         if 'c' in x:
 #                                             if 'k' in x:
 #                                                 check = True
-#     print(check)                                                    
+#     print(check)
 
 
-#gemstone
+# gemstone
 # n1 = int(input())
 # arr1 = []
 # for _ in range(n1):
 #     arr1.append(input())
-# # print(arr1)   
-# lst1 = [] 
+# # print(arr1)
+# lst1 = []
 # for x in arr1:
 #     for y in x:
 #         lst1.append(y)
@@ -1622,11 +1622,11 @@ print('-------Day 9-------')
 #             # print(x,y)
 #             count += 1
 #             if count == n1:
-#                 count1 += 1 
-# print(count1)                
+#                 count1 += 1
+# print(count1)
 
 
-#pangrams
+# pangrams
 # str = input()
 # check = True
 # for x in str:
@@ -1649,9 +1649,9 @@ print('-------Day 9-------')
 # for x in str2:
 #     for y in x:
 #         lst.append(ord(y))
-        
+
 # lst = list(set(lst))
-# # print(lst)    
+# # print(lst)
 # # print(ord('a'),ord('z'))
 # check = True
 
@@ -1660,25 +1660,61 @@ print('-------Day 9-------')
 #         continue
 #     else:
 #         check = False
-# # print(check)        
+# # print(check)
 
 # if check:
 #     print('pangram')
 # else:
-#     print('not pangram')    
+#     print('not pangram')
 
 
-#scoring
+# scoring
+# n1 = int(input())
+# arr1 = []
+# for _ in range(n1):
+#     arr1.append(input())
+# # print(arr1)
+
+# lst1 = []
+# for x in arr1:
+#     lst1.append(list(set(x)))
+# # print(lst1)
+
+# for x in lst1:
+#     print(len((x)))
+
+
+# data structures
+# arrays
+n1 = int(input())
+arr1 = list(map(int, input().split(' ')))
+# print(arr1)
+
+lst1 = []
+for x in reversed(arr1):
+    lst1.append(x)
+# print(lst1[:])
+
+str1 = ''
+for x in lst1:
+    str1 += str(x) + ' '
+print(str1)
+
+
+#sparse arrays
 n1 = int(input())
 arr1 = []
 for _ in range(n1):
     arr1.append(input())
 # print(arr1)    
 
-lst1 = []
-for x in arr1:
-    lst1.append(list(set(x)))
-# print(lst1)    
+n2 = int(input())
+arr2 = []
+for _ in range(n2):
+    arr2.append(input())
+# print(arr2)    
 
-for x in lst1:
-    print(len((x)))
+# print(arr1.count(arr2[0]))
+
+for x in arr2:
+    print(arr1.count(x))
